@@ -8,7 +8,9 @@ A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this
 In today's project, I created AWS to create my VPC along with Subnet and Internet gateway to demonstrate my learnings in building VPC
 
 ### Personal reflection
-This project took me around 35 minutes including documentation after understanding the concepts of IPV4, CIDR blocks, Subnets and Internet gateway.
+Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking. I was able to deepen my understanding of key networking concepts such as IPv4 addressing, CIDR blocks, and subnetting.
+
+The entire exercise, including documentation, was completed in approximately 45 minutes, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
 
 ![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
 
