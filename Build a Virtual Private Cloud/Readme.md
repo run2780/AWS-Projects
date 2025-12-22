@@ -19,7 +19,7 @@ In this step, I will create an AWS IAM user to set up my VPC. So far, I’ve onl
 ### How VPCs work?
 A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix with others. 
 
-####Can I create anything in my AWS account without a VPC? 
+#### Can I create anything in my AWS account without a VPC? 
 You can use some AWS services like Amazon S3 or AWS Lambda without setting up a VPC. These services are designed to work on the internet without needing a private network setup.
 
 ### Why there is a default VPC in AWS accounts
