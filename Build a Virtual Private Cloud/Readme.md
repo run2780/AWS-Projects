@@ -81,6 +81,10 @@ VPCs were originally designed for setting up private networks for EC2 instances!
 --cidr-block 10.0.0.0/24 sets up the CIDR block for the VPC we're creating.
 --queryVpc.VpcId --output text asks the terminal to format its response as plain text and only show the VPC ID (instead of all the other data is usually shows).
 
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/cloudshell_CLI.png?raw=true)
+
+### Comparing Cloud Shell vs. AWS Console
+Cloud Shell is an excellent middle-ground that provides the power of the CLI without the overhead of local setup and authentication. It is particularly useful for debugging resources within private networks, potentially replacing traditional bastion hosts. The Cloud Console (GUI) is the most intuitive for visual learners and simple, one-off tasks, but it becomes cumbersome for complex or repetitive configurations. Overall, I preferred Cloud console because it is highly scriptable (Bash, Python) for repeatable tasks
 
 
 
