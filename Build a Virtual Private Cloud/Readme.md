@@ -65,14 +65,21 @@ Attaching an internet gateway means resources in your VPC can now access the int
 In this project extension, I will open a handy tool (called AWS Cloud Shell) to run commands. Run AWS CLI commands to set up a VPC, subnet and internet gateway
 
 #### Exploring Cloud Shell and CLI
-#####What is Cloud Shell?
+##### What is Cloud Shell?
 AWS Cloud Shell is shell in your AWS Management Console, which means it's a space for you to run code. The awesome thing about AWS Cloud Shell is that it already has AWS CLI pre-installed. What is CLI? AWS CLI (Command Line Interface) is a software that lets you create, delete and update AWS resources with commands instead of clicking through your console.
 
-#####Debugging my setup
+##### Debugging my setup
 Let's create a new VPC with the CIDR block 10.0.0.0/24. To set up a VPC or a subnet, you can use the command 
 “aws ec2 create-vpc --cidr-block 10.0.0.0/24 --query Vpc.VpcId --output text” 
 Make sure to avoid errors by including CIDR block. Initially error came when CIDR block was not mentioned. 
 
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/vpc_create_error_CLI.png?raw=true)
+
+##### Why does the command start with “aws ec2”? Aren't we creating a VPC? 
+VPCs were originally designed for setting up private networks for EC2 instances! VPCs are now essential for a wider range of services, but they were initially tied to EC2, so their CLI commands still start with “aws ec2”. Break down of this command: aws ec2tells the CLI we want to use the EC2 service.
+“create-vpc” is the specific action we are doing, which is creating a new VPC.
+--cidr-block 10.0.0.0/24 sets up the CIDR block for the VPC we're creating.
+--queryVpc.VpcId --output text asks the terminal to format its response as plain text and only show the VPC ID (instead of all the other data is usually shows).
 
 
 
