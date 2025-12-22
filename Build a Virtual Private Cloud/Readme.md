@@ -17,7 +17,10 @@ The entire exercise, including documentation, was completed in approximately 45 
 ### Virtual Private Clouds (VPCs)
 
 ##### What I did in this step?
-In this step, I will create an AWS IAM user to set up my VPC. So far, I’ve only been using the AWS root user, but that’s not safe for everyday work. When you first open an AWS account, you get access through the root user. This account has full control over everything. Because it’s so powerful, AWS recommends not using the root user for daily tasks. If someone gets access to it, they could take over your whole account. Instead, the safer way is to create an IAM user. IAM users can be given only the permissions they need, which keeps your account more secure.
+###### Step: Creating an AWS IAM User  
+To securely set up my VPC, I will create an AWS Identity and Access Management (IAM) user. Until now, I have been working with the AWS root user, which is automatically provided when an account is first created. The root user has unrestricted access to all resources and services, making it extremely powerful but unsuitable for everyday operations.
+
+Because of the elevated privileges associated with the root account, AWS strongly advises against using it for routine tasks. If compromised, the root user could expose the entire account to significant risk. A more secure approach is to create dedicated IAM users with only the permissions required for their specific responsibilities. This principle of least privilege ensures tighter control, minimizes potential vulnerabilities, and enhances overall account security.
 
 ##### How VPCs work?
 A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix with others. 
