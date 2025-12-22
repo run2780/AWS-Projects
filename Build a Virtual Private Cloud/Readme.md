@@ -1,4 +1,4 @@
-                                                                                    **Build a Virtual Private Cloud (VPC)**
+                                                                                    #Build a Virtual Private Cloud (VPC)
                                                                                     
 In this project, I will demonstrate how to create a VPC (Virtual Private Cloud), create a Subnet and an Internet gateway. I'm doing this project to learn and dive into the core of AWS networking by creating my very own VPC.
 
@@ -8,6 +8,8 @@ In today's project, I created AWS to create my VPC along with Subnet and Interne
 
 Personal reflection
 This project took me around 35 minutes including documentation after understanding the concepts of IPV4, CIDR blocks, Subnets and Internet gateway.
- ![Image Alt]([image_url](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true))
+
+  ![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
+  
  
 
