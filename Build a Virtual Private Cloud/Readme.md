@@ -25,7 +25,7 @@ You can use some AWS services like Amazon S3 or AWS Lambda without setting up a 
 ### Why there is a default VPC in AWS accounts
 There was already a default VPC in my account ever since my AWS account was created. This is because AWS has set up a default VPC to allow me to deploy resources like EC2 instances or RDS databases right away without having to create my own VPC from scratch.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/create%20vpc.png?raw=true)
 
 ### Defining IPv4 CIDR blocks
 
