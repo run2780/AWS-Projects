@@ -1,7 +1,7 @@
  # Build a Virtual Private Cloud (VPC) 
- 
-                                                                                    
-In this project, I will demonstrate how to create a VPC (Virtual Private Cloud), create a Subnet and an Internet gateway. I'm doing this project to learn and dive into the core of AWS networking by creating my very own VPC.
+                                                                                     
+#### Project Overview  
+This project focuses on the foundational aspects of AWS networking. The objective is to design and implement a Virtual Private Cloud (VPC), configure a Subnet, and establish an Internet Gateway. Through this hands-on exercise, I aim to strengthen my understanding of AWS networking concepts by building and managing a custom VPC environment.
 
 ### What is Amazon VPC?
 A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix with others.
