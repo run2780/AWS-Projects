@@ -23,7 +23,8 @@ To securely set up my VPC, I will create an AWS Identity and Access Management (
 Because of the elevated privileges associated with the root account, AWS strongly advises against using it for routine tasks. If compromised, the root user could expose the entire account to significant risk. A more secure approach is to create dedicated IAM users with only the permissions required for their specific responsibilities. This principle of least privilege ensures tighter control, minimizes potential vulnerabilities, and enhances overall account security.
 
 ##### How VPCs work?
-A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix with others. 
+  
+A Virtual Private Cloud (VPC) is a logically isolated section of the AWS cloud where you can provision and manage resources within a network that you fully control. It provides a secure and dedicated environment, ensuring that your resources remain separate from those of other customers. Within a VPC, you can define your own IP address ranges, create subnets, configure route tables, and establish gateways, giving you granular control over networking and security. 
 
 #### Can I create anything in my AWS account without a VPC? 
 You can use some AWS services like Amazon S3 or AWS Lambda without setting up a VPC. These services are designed to work on the internet without needing a private network setup.
@@ -40,7 +41,8 @@ IPv4 stands for Internet Protocol version 4, which is the most common way to wri
 ### Subnets
 
 ##### What I did in this step
-In this step, I will be creating a subnet to divide this large space (VPC) into subdivisions so you can start planning where different resources will live and operate.
+###### Step: Creating a Subnet  
+I will create a Subnet within the Virtual Private Cloud (VPC) to logically divide the larger network space into smaller, manageable segments. Subnets enable structured planning by designating specific areas where different resources can be deployed and operated. This subdivision not only improves organization but also enhances control over network traffic, security, and resource allocation.
 
 ##### Creating and configuring subnets
 If your VPC is a city, subnets are like different neighbourhoods inside your city. You use subnets to group resources with similar access rules and restrictions. Some subnets might be public areas that all resources can access (public subnets) while others are private areas with limited access (private subnets). 
