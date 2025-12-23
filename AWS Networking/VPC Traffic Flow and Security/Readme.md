@@ -12,7 +12,7 @@
 
 ## Project Overview
 In VPC Traffic Flow and Security let's keep diving into the core essentials of building an Amazon Virtual Private Cloud (VPC).
-####Get ready to:
+#### Get ready to:
 * Create a route table.
 * Create a security group.
 * Create a Network ACL (Network Access Control List).
