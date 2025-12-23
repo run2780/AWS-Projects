@@ -10,17 +10,23 @@
 
 ---
 
-## Introducing Today's Project!
+## Project Overview
+In VPC Traffic Flow and Security let's keep diving into the core essentials of building an Amazon Virtual Private Cloud (VPC).
+Get ready to:
+🚏 Create a route table.
+👮‍♀️ Create a security group.
+📋 Create a Network ACL (Network Access Control List).
 
 ### What is Amazon VPC?
 
-A VPC (Virtual Private Cloud) is like your own private space inside AWS. In thisspace, you can set up and run AWS resources in a network that you control. Themain idea is that it’s separate and secure, so your resources don’t mix withothers.
+A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. Themain idea is that it’s separate and secure, so your resources don’t mix withothers.
 
-### How I used Amazon VPC in this project
+### How I used Amazon VPC in this project?
 
-In today's project, I used Amazon VPC to demonstrate how data flow from client/user to VPC via Security groups and Network ACL.
+In this project, I used Amazon VPC to demonstrate how data flow from client/user to VPC via Security groups and Network ACL.
 
-### One thing I didn't expect in this project was...
+### Personal reflection
+Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking. I was able to deepen my understanding of key networking concepts such as IPv4 addressing, CIDR blocks, and subnetting.
 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 
