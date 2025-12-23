@@ -65,7 +65,7 @@ Last step in this project - let's attach your VPC with an internet gateway. This
 An internet gateway connects your city (VPC) and the outside world (internet).Internet gateways are key to making applications available on the internet. By attaching an internet gateway, your instances can access the internet and be accessible to external users.
 Attaching an internet gateway means resources in your VPC can now access the internet. The EC2 instances with public IP addresses also become accessible to users, so your applications hosted on those servers become public too.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/internet%20gateway%20panel.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/internet%20gateway%20panel.png?raw=true)
 
 ### Using the AWS CLI
 
@@ -81,7 +81,7 @@ Let's create a new VPC with the CIDR block 10.0.0.0/24. To set up a VPC or a sub
 “aws ec2 create-vpc --cidr-block 10.0.0.0/24 --query Vpc.VpcId --output text” 
 Make sure to avoid errors by including CIDR block. Initially error came when CIDR block was not mentioned. 
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/vpc_create_error_CLI.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/vpc_create_error_CLI.png?raw=true)
 
 ##### Why does the command start with “aws ec2”? Aren't we creating a VPC? 
 VPCs were originally designed for setting up private networks for EC2 instances! VPCs are now essential for a wider range of services, but they were initially tied to EC2, so their CLI commands still start with “aws ec2”. Break down of this command: aws ec2tells the CLI we want to use the EC2 service.
@@ -89,7 +89,7 @@ VPCs were originally designed for setting up private networks for EC2 instances!
 --cidr-block 10.0.0.0/24 sets up the CIDR block for the VPC we're creating.
 --queryVpc.VpcId --output text asks the terminal to format its response as plain text and only show the VPC ID (instead of all the other data is usually shows).
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/cloudshell_CLI.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/cloudshell_CLI.png?raw=true)
 
 ### Comparing Cloud Shell vs. AWS Console
 Cloud Shell is an excellent middle-ground that provides the power of the CLI without the overhead of local setup and authentication. It is particularly useful for debugging resources within private networks, potentially replacing traditional bastion hosts. The Cloud Console (GUI) is the most intuitive for visual learners and simple, one-off tasks, but it becomes cumbersome for complex or repetitive configurations. Overall, I preferred Cloud console because it is highly scriptable (Bash, Python) for repeatable tasks
