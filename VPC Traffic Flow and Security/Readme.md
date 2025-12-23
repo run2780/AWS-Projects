@@ -2,7 +2,6 @@
 
 # VPC Traffic Flow and Security
 
-**Project Link:** [View Project](http://learn.nextwork.org/projects/aws-networks-security)
 
 **Author:** Arun Srinivasan  
 **Email:** run2780@gmail.com
@@ -125,7 +124,6 @@ This means default network ACLs allow all inbound and outbound traffic, unless c
 
 ---
 
-## Tracking VPC Resources
 
 ---
 
