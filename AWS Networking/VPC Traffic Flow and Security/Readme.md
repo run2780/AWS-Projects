@@ -112,7 +112,7 @@ Think of Network ACLs as traffic cops stationed at every entry and exit point of
 
 * Network ACLs are used to set broad traffic rules that apply to an entire subnet. For example, blocking incoming traffic from a particular range of IP addresses or denying all outbound traffic to certain ports.
 * Security groups allow for more granular control, managing access to individual resource. You can specify which ports and protocols are allowed for each connected resource.
-Having both is a great security practice! You can set broad restrictions at the subnet level with ACLs, and more specific limits at the resource level through security groups. This dual layer takes security to the next level as traffic must pass through multiple checks, which reduces the chances of unwanted access.
+##### Having both is a great security practice! You can set broad restrictions at the subnet level with ACLs, and more specific limits at the resource level through security groups. This dual layer takes security to the next level as traffic must pass through multiple checks, which reduces the chances of unwanted access.
 
 ### Default vs Custom Network ACLs
 
