@@ -52,7 +52,9 @@ The entire exercise, including documentation, was completed in approximately 45 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 
 ### Mission to accomplish:
+
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
+
 ---
 ## Route tables
 
