@@ -51,6 +51,8 @@ There was already a default VPC in my account ever since my AWS account was crea
 
 IPv4 stands for Internet Protocol version 4, which is the most common way to write an IP address. To set up my VPC, I had to define an IPv4 CIDR block, which means a range of IP address my VPC can allocate to the resources deployed into my VPC. What is a CIDR block? CIDR (which stands for Classless Inter-Domain Routing) is a way to assign a whole block of IP addresses, kind of like creating a zone/area in a city. To understand how big a CIDR block is, look at the number after the slash - the smaller the number, the larger the CIDR block! For example,10.0.0.0/16 means the first 16 bits of your IP address (10.0) are fixed, but the remaining 16 bits (i.e. the second half of the IP address) can be allocated however you like. Addresses within this CIDR block start at 10.0.0.0 and go up to10.0.255.255. There are 2^16 (65,536) possible IP addresses within this subnet.
 
+---
+
 ### Subnets
 
 ##### What I did in this step  
@@ -70,6 +72,8 @@ You'd use it for internal resources that don’t need to be publicly accessible.
 ##### Auto-assigning public IPv4 addresses
 Once I created my subnet, I enabled auto-assign public IPv4 addresses. By default, your resources already have private IP addresses, but this only allows internal communication within your VPC. To access the internet or be accessible from the internet, the instance would need a public IP address. When you enable auto-assign public IPv4 address for a subnet, any EC2 instance launched in that subnet will instantly get a public IP address so you won't have to create one manually - a huge time saver!
 
+---
+
 ### Internet gateways
 ##### What I did in this step?
 Last step in this project - let's attach your VPC with an internet gateway. This is like building a bridge (internet gateway) that links your private city (VPC) to the outside world (the internet), so your resources can communicate beyond your private space.
@@ -79,6 +83,8 @@ An internet gateway connects your city (VPC) and the outside world (internet).In
 Attaching an internet gateway means resources in your VPC can now access the internet. The EC2 instances with public IP addresses also become accessible to users, so your applications hosted on those servers become public too.
 
 ![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/internet%20gateway%20panel.png?raw=true)
+
+---
 
 ### Using the AWS CLI
 
