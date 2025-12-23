@@ -19,14 +19,33 @@ In VPC Traffic Flow and Security let's keep diving into the core essentials of b
 
 ### What is Amazon VPC?
 
-A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. Themain idea is that it’s separate and secure, so your resources don’t mix withothers.
+A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix withothers.
 
 ### How I used Amazon VPC in this project?
 
-In this project, I used Amazon VPC to demonstrate how data flow from client/user to VPC via Security groups and Network ACL.
+To ensure secure and efficient communication within the cloud environment, I leverage Amazon Virtual Private Cloud (VPC) as the foundation of my project’s networking setup. The focus is on controlling traffic flow and enforcing security at multiple layers.
+
+#### Core Essentials Implemented
+##### Route Table
+* Defines how traffic is directed within the VPC.
+* Associates subnets with specific routes to control communication between internal resources and external networks.
+* Ensures proper connectivity to the internet (via Internet Gateway) or private networks (via VPN/Direct Connect).
+
+##### Security Group
+* Acts as a virtual firewall at the instance level.
+* Controls inbound and outbound traffic for EC2 instances.
+* Configured with rules to allow only necessary protocols and ports (e.g., SSH, HTTP/HTTPS).
+* Provides stateful filtering, meaning return traffic is automatically allowed.
+
+##### Network ACL (Access Control List)
+* Provides an additional layer of security at the subnet level.
+* Controls inbound and outbound traffic using stateless rules (explicitly allow or deny).
+* Useful for setting broader restrictions across multiple instances in a subnet.
+* Helps mitigate risks by blocking unwanted IP ranges or protocols.
 
 ### Personal reflection
-Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking. I was able to deepen my understanding of key networking concepts such as IPv4 addressing, CIDR blocks, and subnetting.
+Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking. This project showed me that cloud infrastructure is not just about deploying resources—it’s about designing secure, scalable systems with intention. I now feel more prepared to approach larger, more complex architectures with confidence. 
+The entire exercise, including documentation, was completed in approximately 45 minutes, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 
