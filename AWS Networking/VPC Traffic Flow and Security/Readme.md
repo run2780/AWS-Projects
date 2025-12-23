@@ -117,7 +117,7 @@ Having both is a great security practice! You can set broad restrictions at the 
 
 ### Default vs Custom Network ACLs
 
-##### Similar to security groups, network ACLs use inbound and outbound rules
+Similar to security groups, network ACLs use inbound and outbound rules
 AWS sets up a default network ACL for every VPC in your account. This default is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 Just like security groups, network ACLs use inbound and outbound rules to decide which data packets are allowed to enter or leave subnets:
 
