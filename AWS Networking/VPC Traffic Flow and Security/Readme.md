@@ -2,8 +2,8 @@
 
 ## VPC Traffic Flow and Security
 
-**Author:** Arun Srinivasan  
-**Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
+** Author:Arun Srinivasan  
+** Linkedin: www.linkedin.com/in/arun-srinivasan-2a244325
 ---
 
 ## Project Overview
