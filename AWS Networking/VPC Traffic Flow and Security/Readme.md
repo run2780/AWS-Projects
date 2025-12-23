@@ -44,7 +44,9 @@ To ensure secure and efficient communication within the cloud environment, I lev
 * Helps mitigate risks by blocking unwanted IP ranges or protocols.
 
 ### Personal reflection
-Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking. This project showed me that cloud infrastructure is not just about deploying resources—it’s about designing secure, scalable systems with intention. I now feel more prepared to approach larger, more complex architectures with confidence. 
+Completing this project provided me with valuable hands-on experience in the foundational aspects of AWS networking.
+This project showed me that cloud infrastructure is not just about deploying resources—it’s about designing secure, scalable systems with intention. I now feel more prepared to approach larger, more complex architectures with confidence. 
+
 The entire exercise, including documentation, was completed in approximately 45 minutes, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
