@@ -21,7 +21,11 @@ Completing this project provided me with valuable hands-on experience in the fou
 
 The entire exercise, including documentation, was completed in approximately 45 minutes, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
 
+---
+### Mission to accomplish:
 ![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
+
+---
 
 ### Virtual Private Clouds (VPCs)
 
@@ -104,7 +108,7 @@ VPCs were originally designed for setting up private networks for EC2 instances!
 Cloud Shell is an excellent middle-ground that provides the power of the CLI without the overhead of local setup and authentication. It is particularly useful for debugging resources within private networks, potentially replacing traditional bastion hosts. The Cloud Console (GUI) is the most intuitive for visual learners and simple, one-off tasks, but it becomes cumbersome for complex or repetitive configurations. Overall, I preferred Cloud console because it is highly scriptable (Bash, Python) for repeatable tasks
 
 
-
+---
   
  
 
