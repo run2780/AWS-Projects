@@ -8,8 +8,6 @@
 
 ## VPC Traffic Flow and Security
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
-
 ---
 
 ## Introducing Today's Project!
@@ -31,6 +29,7 @@ One thing I didn't expect in this project was default network ACL available whic
 This project took me around 45 minutes including documentation
 
 ---
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
 
 ## Route tables
 
