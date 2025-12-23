@@ -59,7 +59,6 @@ Every subnet in your VPC needs to be linked to a route table, because the table 
 
 Routes tables are needed to make a subnet public because Subnet needs to have a route to an nternet gateway in order to be considered public.
 
-
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_0a07b191)
 
 ### Route destination and target
@@ -69,8 +68,8 @@ A route table is made up of routes, which are defined by its destination and tar
 * Destination: The IP address range that traffic wants to reach.
 * Target: The road or path that the traffic will have to take to get to its destination.
 
-igw-xxxxxx: Means the traffic is routed to the internet via the Internet Gateway.
-local: Means the traffic stays within the VPC, allowing internal communication between resources.
+- igw-xxxxxx: Means the traffic is routed to the internet via the Internet Gateway.
+- local: Means the traffic stays within the VPC, allowing internal communication between resources.
 
 The route in my route table that directed internet-bound traffic to my internet gateway had a destination of 0.0.0.0/0 and a target of MyWork IG(internet gateway).
 
