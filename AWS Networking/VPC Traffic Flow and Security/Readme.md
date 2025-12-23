@@ -51,10 +51,6 @@ The entire exercise, including documentation, was completed in approximately 45 
 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 
-### This project took me...
-
-This project took me around 45 minutes including documentation
-
 ---
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
 
