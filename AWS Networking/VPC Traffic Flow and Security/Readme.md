@@ -102,10 +102,6 @@ By default, Outbound rule will allow all outbound traffic.
 outbound rules help manage how your server interacts with other parts of the internet.
 Examples of outbound data: Your server requests data from another service; your app sends out an email notification.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
-
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
-
 ---
 
 ## Network ACLs
@@ -131,7 +127,7 @@ Just like security groups, network ACLs use inbound and outbound rules to decide
 The second line in each ruleset shows an asterisk (*) that acts as a catch-all rule in case traffic does not match any of the earlier rules. In our case, since Rule 100 already allows all traffic, the asterisk rule won't actually come into play.
 This means default network ACLs allow all inbound and outbound traffic, unless customized.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_4faeb056)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
 
 ---
 
