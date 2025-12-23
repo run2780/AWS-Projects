@@ -66,8 +66,8 @@ Routes tables are needed to make a subnet public because Subnet needs to have a 
 
 A route table is made up of routes, which are defined by its destination and target.
 
-Destination: The IP address range that traffic wants to reach.
-Target: The road or path that the traffic will have to take to get to its destination.
+* Destination: The IP address range that traffic wants to reach.
+* Target: The road or path that the traffic will have to take to get to its destination.
 
 igw-xxxxxx: Means the traffic is routed to the internet via the Internet Gateway.
 local: Means the traffic stays within the VPC, allowing internal communication between resources.
