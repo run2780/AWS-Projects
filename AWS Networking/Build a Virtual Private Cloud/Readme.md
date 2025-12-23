@@ -32,7 +32,7 @@ You can use some AWS services like Amazon S3 or AWS Lambda without setting up a 
 ##### Why there is a default VPC in AWS accounts
 There was already a default VPC in my account ever since my AWS account was created. This is because AWS has set up a default VPC to allow me to deploy resources like EC2 instances or RDS databases right away without having to create my own VPC from scratch.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/create%20vpc.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/create%20vpc.png?raw=true)
 
 ##### Defining IPv4 CIDR blocks
 
@@ -52,7 +52,7 @@ Public subnets are open areas, while private subnets are restricted. Each subnet
 Subnets could be private or public. The difference between public and private subnets are: A public subnet is connected to the internet. Resources inside a public subnet can communicate with external networks. A private subnet does not have direct internet access.
 You'd use it for internal resources that don’t need to be publicly accessible. Why your subnet is not considered a public subnet yet? Though we have labelled our Subnet as "Public1", it is still not a public subnet as it is not yet connected to internet gateway. For a subnet to be considered public, it has to connect to an internet gateway.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/Build%20a%20Virtual%20Private%20Cloud/create_subnet_panel.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/create_subnet_panel.png?raw=true)
 
 ##### Auto-assigning public IPv4 addresses
 Once I created my subnet, I enabled auto-assign public IPv4 addresses. By default, your resources already have private IP addresses, but this only allows internal communication within your VPC. To access the internet or be accessible from the internet, the instance would need a public IP address. When you enable auto-assign public IPv4 address for a subnet, any EC2 instance launched in that subnet will instantly get a public IP address so you won't have to create one manually - a huge time saver!
