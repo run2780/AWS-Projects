@@ -1,4 +1,4 @@
- # Build a Virtual Private Cloud (VPC) 
+# Build a Virtual Private Cloud (VPC) 
                                                                                      
 ## Project Overview  
 This project focuses on the foundational aspects of AWS networking. The objective is to design and implement a Virtual Private Cloud (VPC), configure a Subnet, and establish an Internet Gateway. Through this hands-on exercise, I aim to strengthen my understanding of AWS networking concepts by building and managing a custom VPC environment.
