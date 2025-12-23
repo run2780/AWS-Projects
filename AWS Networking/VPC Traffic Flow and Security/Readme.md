@@ -51,6 +51,8 @@ The entire exercise, including documentation, was completed in approximately 45 
 
 One thing I didn't expect in this project was default network ACL available which is designed to allow all traffic to move freely until you decide to customize the rules to fit your needs.
 
+### Mission to accomplish:
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
 ---
 ## Route tables
 
@@ -59,7 +61,7 @@ Every subnet in your VPC needs to be linked to a route table, because the table 
 
 Routes tables are needed to make a subnet public because Subnet needs to have a route to an nternet gateway in order to be considered public.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_0a07b191)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/Route%20table.png?raw=true)
 
 ### Route destination and target
 
@@ -73,7 +75,7 @@ A route table is made up of routes, which are defined by its destination and tar
 
 The route in my route table that directed internet-bound traffic to my internet gateway had a destination of 0.0.0.0/0 and a target of MyWork IG(internet gateway).
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_0a07b191)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
 
 ---
 
