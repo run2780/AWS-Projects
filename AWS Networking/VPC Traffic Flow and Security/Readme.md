@@ -77,8 +77,6 @@ A route table is made up of routes, which are defined by its destination and tar
 
 The route in my route table that directed internet-bound traffic to my internet gateway had a destination of 0.0.0.0/0 and a target of MyWork IG(internet gateway).
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
-
 ---
 
 ## Security groups
@@ -105,6 +103,8 @@ outbound rules help manage how your server interacts with other parts of the int
 Examples of outbound data: Your server requests data from another service; your app sends out an email notification.
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
 
 ---
 
