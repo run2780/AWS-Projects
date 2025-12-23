@@ -89,13 +89,13 @@ Protocols: With VPCs as our city and every resource as a building, think of prot
 
 ### Inbound vs Outbound rules
 
-Inbound rules control the data that can enter the resources in your security group. 
+* Inbound rules: Inbound rules control the data that can enter the resources in your security group. 
 
 In this scenario, setting up inbound rules is important for allowing users to access your public website, while 
 Examples of inbound data: Visitors and form submissions to your website.
 I  configured an inbound rule that allows all inbound HTTP traffic.
 
-Outbound rules are rules to control that data that your resources can send out.
+* Outbound rules: Outbound rules are rules to control that data that your resources can send out.
 By default, Outbound rule will allow all outbound traffic.
 outbound rules help manage how your server interacts with other parts of the internet.
 Examples of outbound data: Your server requests data from another service; your app sends out an email notification.
