@@ -49,8 +49,8 @@ IPv4 stands for Internet Protocol version 4, which is the most common way to wri
 
 ### Subnets
 
-##### What I did in this step
-###### Step: Creating a Subnet  
+##### What I did in this step  
+<br> Step: Creating a Subnet  
 I will create a Subnet within the Virtual Private Cloud (VPC) to logically divide the larger network space into smaller, manageable segments. Subnets enable structured planning by designating specific areas where different resources can be deployed and operated. This subdivision not only improves organization but also enhances control over network traffic, security, and resource allocation.
 
 ##### Creating and configuring subnets
