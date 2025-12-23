@@ -2,7 +2,7 @@
 
 
 **Author:** Arun Srinivasan  
-**Email:** run2780@gmail.com
+**Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
 
 ---
 
@@ -128,11 +128,6 @@ The second line in each ruleset shows an asterisk (*) that acts as aÂ catch-allÂ
 This means default network ACLs allow all inbound and outbound traffic, unless customized.
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_4faeb056)
-
----
-
-
----
 
 ---
 
