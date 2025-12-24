@@ -127,5 +127,25 @@ This means default network ACLs allow all inbound and outbound traffic, unless c
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
 
+### Recap
+
+* Client/User: A user enters the URL of your website into their web browser and hits enter.<br>
+
+* Internet Gateway: The request is sent from the user's browser through the internet and reaches your internet gateway, MyWork IG.<br>
+
+* VPC: The internet gateway forwards the user's request to the VPC it's attached to, MyWork VPC.
+
+* Route Table: Your VPC has a route table for your public subnet (called MyWork route table), which directs traffic to your EC2 instance hosting the website. The user's request get put on the local route in the route table.
+
+* Network ACL: While en route to your EC2 instance, the request has to pass through the network ACL associated with your public subnet. The network ACL has an inbound rule (rule 100) that lets in traffic from anywhere (0.0.0.0/0), so your request is let through.
+
+* Public Subnet: The request enters your public subnet Public 1 and travels to your EC2 instance within the subnet.
+
+* Security Group: The request reaches the security group MyWork Security Group attached to the EC2 instance. The security group has an inbound rule that allows HTTP traffic (Port 80) from anywhere (0.0.0.0/0), so the request can pass through.
+
+* EC2 Instance: The request reaches your EC2 instance hosting the website. The web server on the EC2 instance processes the request and prepares the response.
+
+* Data gets sent back: Website content is sent back to the user. The outbound traffic goes through the security group, public subnet, network ACL, route table, VPC, and internet gateway, and user gets to see website content load on their page.
+
 ---
 
