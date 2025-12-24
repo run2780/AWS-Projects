@@ -129,9 +129,9 @@ This means default network ACLs allow all inbound and outbound traffic, unless c
 
 ### Recap
 
-* Client/User: A user enters the URL of your website into their web browser and hits enter.<br>
+* Client/User: A user enters the URL of your website into their web browser and hits enter.
 
-* Internet Gateway: The request is sent from the user's browser through the internet and reaches your internet gateway, MyWork IG.<br>
+* Internet Gateway: The request is sent from the user's browser through the internet and reaches your internet gateway, MyWork IG.
 
 * VPC: The internet gateway forwards the user's request to the VPC it's attached to, MyWork VPC.
 
