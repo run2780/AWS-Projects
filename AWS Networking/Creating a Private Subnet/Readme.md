@@ -70,10 +70,9 @@ Purpose:
 Implementation:
 * Created a new route table and associated it with the private subnet.
 * Added a local route (10.0.0.0/16) for intra-VPC communication.
-* Configured a route to a NAT Gateway in a public subnet so instances could download updates or connect outward without being exposed.
   
 Outcome:
-* Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside.
+* Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside. In this project, I did not set up NAT gateway.
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/Private%20route%20table.png?raw=true)
 
