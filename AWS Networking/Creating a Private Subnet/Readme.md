@@ -37,6 +37,7 @@ The entire exercise, including documentation, was completed in approximately 30 
 
 One thing I didn’t expect in this project was how much fine‑grained control the private route table gave us once we introduced the NAT Gateway. At first, it seemed straightforward—just block direct internet access—but the moment we needed selective outbound connectivity (for patching servers or pulling container images), the complexity jumped.
 
+---
 
 ### Mission to accomplish:
 
@@ -63,6 +64,8 @@ Outcome:
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
 
+---
+
 #### Private Route Table
 Purpose:
 * To control traffic flow for the private subnet.
@@ -81,6 +84,8 @@ Outcome:
 By default, my private subnet is associated with the default route table.i.e the route table that has a route to an internet gateway.
 I had to set up a new route table because my subnet cannot have a route to an internet gateway
 My private subnet's dedicated route table only has one inbound and one outbound rule that allows internal communication. i.e, with a destination of another resource within my VPC.
+
+---
 
 #### Private Network ACL (NACL)
 Purpose:
@@ -125,5 +130,5 @@ My private and public subnets cannot have the same IPV4 CIDR block i.e. same ran
 
 ---
 
----
+
 
