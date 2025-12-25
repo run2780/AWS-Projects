@@ -82,9 +82,6 @@ By default, my private subnet is associated with the default route table.i.e the
 I had to set up a new route table because my subnet cannot have a route to an internet gateway
 My private subnet's dedicated route table only has one inbound and one outbound rule that allows internal communication. i.e, with a destination of another resource within my VPC.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-private_b4b904b5)
-
-
 #### Private Network ACL (NACL)
 Purpose:
 * To add an extra layer of security at the subnet level.
