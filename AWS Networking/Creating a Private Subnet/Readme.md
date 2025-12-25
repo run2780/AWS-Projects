@@ -17,8 +17,13 @@ This project is to set up your very first private subnet and learn its differenc
 
 #### Get ready to:
 * Create a private Subnet
-* Create a dedivated(private) route table
+* Create a dedicated(private) route table
 * Create a dedicated(private) Network ACL (Network Access Control List).
+
+### Mission to accomplish:
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
+
 
 ### What is Amazon VPC?
 
@@ -35,6 +40,8 @@ Implementation:
 * Placed it in a specific Availability Zone for redundancy.
 Outcome:
 * This isolated environment kept sensitive workloads secure while still allowing communication with other subnets inside the VPC.
+
+
 
 #### Private Route Table
 Purpose:
