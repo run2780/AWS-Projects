@@ -22,7 +22,7 @@ This project is to set up your very first private subnet and learn its differenc
 
 ### Mission to accomplish:
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/game%20plan.png?raw=true)
 
 
 ### What is Amazon VPC?
