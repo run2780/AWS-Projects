@@ -51,12 +51,14 @@ A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this
 
 #### Private Subnet
 Purpose:
-* We created a private subnet to host backend resources (like databases or internal services) that should not be directly accessible from the internet.<br>
-Implementation:<br>
+* We created a private subnet to host backend resources (like databases or internal services) that should not be directly accessible from the internet.
+
+Implementation:
 * Defined a CIDR block (e.g., 10.0.1.0/24) inside the VPC.
 * Ensured no route to the Internet Gateway was added.
-* Placed it in a specific Availability Zone for redundancy.<br>
-Outcome:<br>
+* Placed it in a specific Availability Zone for redundancy.
+  
+Outcome:
 * This isolated environment kept sensitive workloads secure while still allowing communication with other subnets inside the VPC.
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
