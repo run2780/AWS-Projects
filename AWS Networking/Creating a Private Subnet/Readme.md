@@ -55,7 +55,7 @@ Purpose:
 Implementation:
 * Defined a CIDR block (e.g., 10.0.1.0/24) inside the VPC.
 * Ensured no route to the Internet Gateway was added.
-* Placed it in a specific Availability Zone for redundancy.
+* Placed it in a specific Availability Zone for redundancy.<br>
 Outcome:
 * This isolated environment kept sensitive workloads secure while still allowing communication with other subnets inside the VPC.
 
