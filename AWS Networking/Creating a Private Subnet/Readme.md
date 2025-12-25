@@ -95,12 +95,6 @@ Implementation:
 Outcome:
 *This hardened the subnet against unauthorized access attempts, complementing security groups at the instance level.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
-
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
-
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_subnet_association_NACL.png?raw=true)
-
 ##### A new network ACL
 
 By default, my private subnet is associated with a default network ACL set up for every VPC. This default network ACL is associated with your private subnet, since you haven't set up an explicit association between your private subnet and another network ACL.
@@ -110,7 +104,12 @@ I set up a dedicated network ACL for my private subnet that restricts traffic an
 
 My new network ACL has two simple rules denying all inbound traffic and denying all outbound traffic!
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-private_1ed2cb07)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_subnet_association_NACL.png?raw=true)
+
 
 ---
 
