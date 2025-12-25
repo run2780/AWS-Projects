@@ -66,10 +66,12 @@ Outcome:
 #### Private Route Table
 Purpose:
 * To control traffic flow for the private subnet.
+  
 Implementation:
 * Created a new route table and associated it with the private subnet.
 * Added a local route (10.0.0.0/16) for intra-VPC communication.
 * Configured a route to a NAT Gateway in a public subnet so instances could download updates or connect outward without being exposed.
+  
 Outcome:
 * Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside.
 
@@ -87,11 +89,13 @@ My private subnet's dedicated route table only has one inbound and one outbound 
 #### Private Network ACL (NACL)
 Purpose:
 * To add an extra layer of security at the subnet level.
+  
 Implementation:
 * Created a custom NACL and associated it with the private subnet.
 * Configured inbound rules to allow only trusted traffic (e.g., from application servers or VPN).
 * Configured outbound rules to allow traffic to internal services and NAT Gateway.
 * Denied all other traffic by default.
+  
 Outcome:
 *This hardened the subnet against unauthorized access attempts, complementing security groups at the instance level.
 
