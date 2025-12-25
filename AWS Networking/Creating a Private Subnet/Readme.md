@@ -41,7 +41,7 @@ Implementation:
 Outcome:
 * This isolated environment kept sensitive workloads secure while still allowing communication with other subnets inside the VPC.
 
-
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
 
 #### Private Route Table
 Purpose:
@@ -52,6 +52,8 @@ Implementation:
 * Configured a route to a NAT Gateway in a public subnet so instances could download updates or connect outward without being exposed.
 Outcome:
 * Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside.
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
 
 #### Private Network ACL (NACL)
 Purpose:
@@ -64,6 +66,7 @@ Implementation:
 Outcome:
 *This hardened the subnet against unauthorized access attempts, complementing security groups at the instance level.
 
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
 
 ### One thing I didn't expect in this project was...
 
