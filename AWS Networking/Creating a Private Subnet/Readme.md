@@ -68,7 +68,7 @@ Outcome:
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
 
