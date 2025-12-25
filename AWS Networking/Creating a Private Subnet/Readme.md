@@ -2,11 +2,9 @@
 
 # Creating a Private Subnet
 
+---
 **Author:** Arun Srinivasan | December 2025  
 **Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
-
----
-
 
 ## Project Overview
 We've learnt about subnets and even created a public subnet that's connected to the internet.
