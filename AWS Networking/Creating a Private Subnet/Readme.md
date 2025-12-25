@@ -35,7 +35,7 @@ A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this
 Purpose:
 * We created a private subnet to host backend resources (like databases or internal services) that should not be directly accessible from the internet.
 Implementation:
-* Defined a CIDR block (e.g., 10.0.2.0/24) inside the VPC.
+* Defined a CIDR block (e.g., 10.0.1.0/24) inside the VPC.
 * Ensured no route to the Internet Gateway was added.
 * Placed it in a specific Availability Zone for redundancy.
 Outcome:
@@ -82,12 +82,11 @@ This project took me around 30 min including documentation
 
 The difference between public and private subnets is that public subnets are acceptable by and can access the internet while private subnets are completelty isolated from internet by default.
 
-
 Having private subnets are useful because keeping resources away from internet is very important for the security of cofidential resources..
 
 My private and public subnets cannot have the same IPV4 CIDR block i.e. same range of IP addressess. The CIDR block for every subnet must be unique and cannot overlap with another subnet
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-private_afe1fdbd)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/Error_create_subnet.png?raw=true)
 
 ---
 
