@@ -53,7 +53,7 @@ Implementation:
 Outcome:
 * Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/Private%20route%20table.png?raw=true)
 
 #### Private Network ACL (NACL)
 Purpose:
