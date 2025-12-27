@@ -134,7 +134,7 @@ Select your public subnet.
 For the Firewall (security groups), we've already created the security group for your public subnet's resources. Choose Select existing security group.
 Select MyWork Public Security Group.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_88727bef)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/Public%20server%20create.png?raw=true)
 
 ---
 
