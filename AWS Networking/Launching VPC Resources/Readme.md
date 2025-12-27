@@ -6,6 +6,8 @@
 **Author:** Arun Srinivasan | December 2025  
 **Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
 
+**DIFFICULTY:** Mildly Spicy
+
 ## Project Overview  
 The goal of this project was to deploy compute resources inside a custom Amazon VPC to understand how networking, isolation, and accessibility work in AWS. Using the Amazon VPC wizard, you quickly created a new Virtual Private Cloud with both public and private subnets, route tables, and gateways.
 ### Key Activities
