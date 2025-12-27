@@ -70,8 +70,27 @@ Why can your new VPC have the same IPv4 CIDR block as NextWork VPC?
 Actually, you can have multiple VPCs with the same IPv4 CIDR block in the same AWS region and account. AWS VPCs are isolated from each other by default, so there won't be any IP conflicts unless you explicitly connect them using VPC peering.
 Bottom line, it's possible for your new VPC to share the same CIDR block as an existing one, but this set up will mean your overlapping VPCs can't talk to each other directly. That's why it'd be best practice to have completely unique CIDR blocks for each VPC in your account!
 
+Resource Map of the VPC created in a traditional way and not the automated one.
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/resource%20map.png?raw=true)
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_1cbb1b88)
+#### Tips for using the VPC resource map
+
+How is it that subnets can't have overlapping CIDR blocks, but VPCs can?
+VPCs are isolated networks within AWS, meaning they don’t interact with each other unless you explicitly set up connectivity between them.
+On the other hand, subnets within a VPC are part of the same network and can directly communicate with each other. Overlapping CIDR blocks within a VPC would create IP address conflicts, making it impossible to route traffic correctly. So, subnets need unique CIDR blocks to ensure smooth internal networking.
+
+How many public subnets could you create?
+AWS's best practice advice is having more private subnets can help with organizing your resources and isolating them for security purposes, whereas public subnets are limited to ensure manageable exposure to the internet.
+Why can't I create more than two public subnets?
+The VPC wizard limits you to two public subnets to keep things straightforward. If you need more, you can always add them manually later - you can have up to 200
+
+NAT gateways let instances in private subnets access the internet for updates and patches, while blocking inbound traffic.
+
+For example, your private server in your private subnet might need to download security updates. By using a NAT gateway, the server can access these updates securely while remaining protected from external threats!
+
+On the other hand, internet gateways let instances in public subnets communicate with the internet both ways i.e. both inbound and outbound traffic.
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
 
 ---
 ## Setting Up Direct VM Access
@@ -140,31 +159,6 @@ My private server security group source is my MyWork public security group which
 
 ---
 
-
-
----
-
-## Speeding up VPC creation
-
-### Tips for using the VPC resource map
-
-How is it that subnets can't have overlapping CIDR blocks, but VPCs can?
-VPCs are isolated networks within AWS, meaning they don’t interact with each other unless you explicitly set up connectivity between them.
-On the other hand, subnets within a VPC are part of the same network and can directly communicate with each other. Overlapping CIDR blocks within a VPC would create IP address conflicts, making it impossible to route traffic correctly. So, subnets need unique CIDR blocks to ensure smooth internal networking.
-
-How many public subnets could you create?
-AWS's best practice advice is having more private subnets can help with organizing your resources and isolating them for security purposes, whereas public subnets are limited to ensure manageable exposure to the internet.
-Why can't I create more than two public subnets?
-The VPC wizard limits you to two public subnets to keep things straightforward. If you need more, you can always add them manually later - you can have up to 200
-
-
-NAT gateways let instances in private subnets access the internet for updates and patches, while blocking inbound traffic.
-
-For example, your private server in your private subnet might need to download security updates. By using a NAT gateway, the server can access these updates securely while remaining protected from external threats!
-
-On the other hand, internet gateways let instances in public subnets communicate with the internet both ways i.e. both inbound and outbound traffic.
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
 
 ---
 
