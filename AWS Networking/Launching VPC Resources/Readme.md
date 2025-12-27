@@ -153,7 +153,7 @@ From a security point of view, anyone with that key can access all the instances
 What is my new security group's source?
 My private server security group source is my MyWork public security group which means only SSH traffic coming from resources associated with that security group would be allowed.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_4a9e8014)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/Private%20Security%20group%20settings.png?raw=true)
 
 ---
 
