@@ -49,7 +49,7 @@ The entire exercise, including documentation, was completed in approximately 1 h
 * Understood how Internet Gateways and NAT Gateways enable or restrict connectivity.
 
 ### Mission to accomplish
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/VPC%20create%20wizard.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/game%20plan.png?raw=true)
 
 
 ---
