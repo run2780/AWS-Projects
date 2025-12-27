@@ -90,8 +90,6 @@ For example, your private server in your private subnet might need to download s
 
 On the other hand, internet gateways let instances in public subnets communicate with the internet both ways i.e. both inbound and outbound traffic.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
-
 ---
 ## Setting Up Direct VM Access
 
