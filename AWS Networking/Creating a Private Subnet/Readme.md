@@ -7,6 +7,11 @@
 **Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
 
 ## Project Overview
+
+* Difficulty: Easy-ish
+* Time: 30 min
+* Key Concepts: Amazon VPC
+  
 We've learnt about subnets and even created a public subnet that's connected to the internet.
 But what about resources that we want to keep private?
 For example, it's very common for engineers to set up an EC2 instance hosting their web app in a public subnet, but keep the database of customers and login details in a private subnet.
