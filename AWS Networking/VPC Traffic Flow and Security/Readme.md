@@ -10,7 +10,7 @@
 
 ## Project Overview
 
-* Difficulty: Mildly Spicy
+* Difficulty: Easy peasy
 * TIme: 45 min
 * Key Concepts: Amazon VPC
 
