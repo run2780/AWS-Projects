@@ -52,7 +52,7 @@ The entire exercise, including documentation, was completed in approximately 1 h
 ## Speeding up VPC creation
 I created a VPC MyWork VPC in a traditional way using AWS console. Created public and private Subnets, Internet gateway, Public Security group, public and Private Network ACL
 
-Again, I used an alternative way to set up an Amazon VPC! This ia an addition to see how quick VPC can be set up using this wizard.
+Again, I used an alternative way to set up an Amazon VPC! This ia an addition to see how quick VPC can be set up using this wizard. Instead of manually configuring route tables, subnets, and gateways step by step, the wizard instantly provisioned those resources in a structured way.
 
 * Head back to your VPC console.
 * From the left hand navigation bar, select Your VPCs.
