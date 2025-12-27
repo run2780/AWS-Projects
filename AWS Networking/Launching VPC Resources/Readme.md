@@ -7,8 +7,6 @@
 **Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
 
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
-
 ---
 
 ## Project Overview  
@@ -51,6 +49,31 @@ The entire exercise, including documentation, was completed in approximately 1 h
 
 ---
 
+## Speeding up VPC creation
+I created a VPC MyWork VPC in a traditional way using AWS console. Created public and private Subnets, Internet gateway, Public Security group, public and Private Network ACL
+
+Again, I used an alternative way to set up an Amazon VPC! This ia an addition to see how quick VPC can be set up using this wizard.
+
+* Head back to your VPC console.
+* From the left hand navigation bar, select Your VPCs.
+* Select Create VPC.
+* We previously stuck to creating a VPC only, but this time select VPC and more.
+
+A visual flow diagram pops up that shows us other VPC resources. This is called a VPC resource map!
+![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Launching%20VPC%20Resources/VPC%20create%20wizard.png?raw=true)
+
+What is a VPC resource map?
+With VPC resource map, you can quickly understand the architectural layout of a VPC, like the number of subnets, which subnets are associated with which route table, and which route tables have routes to an internet gateway.
+Now with this handy VPC resource map, you get to see that selecting the VPC and more option will also help you create VPC resources in the exact same page. No more jumping between pages in your VPC console!
+
+Why can your new VPC have the same IPv4 CIDR block as NextWork VPC?
+Actually, you can have multiple VPCs with the same IPv4 CIDR block in the same AWS region and account. AWS VPCs are isolated from each other by default, so there won't be any IP conflicts unless you explicitly connect them using VPC peering.
+Bottom line, it's possible for your new VPC to share the same CIDR block as an existing one, but this set up will mean your overlapping VPCs can't talk to each other directly. That's why it'd be best practice to have completely unique CIDR blocks for each VPC in your account!
+
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_1cbb1b88)
+
+---
 ## Setting Up Direct VM Access
 
 Directly accessing a virtual machine means logging into and managing the operating system or software of the machine as if you were using it in front of you, but over the internet.
@@ -117,27 +140,7 @@ My private server security group source is my MyWork public security group which
 
 ---
 
-## Speeding up VPC creation
 
-I used an alternative way to set up an Amazon VPC! 
-Head back to your VPC console.
-From the left hand navigation bar, select Your VPCs.
-Select Create VPC.
-We previously stuck to creating a VPC only, but this time select VPC and more.
-A visual flow diagram pops up that shows us other VPC resources. This is called a VPC resource map!
-
-What is a VPC resource map?
-With VPC resource map, you can quickly understand the architectural layout of a VPC, like the number of subnets, which subnets are associated with which route table, and which route tables have routes to an internet gateway.
-
-Now with this handy VPC resource map, you get to see that selecting the VPC and more option will also help you create VPC resources in the exact same page. No more jumping between pages in your VPC console!
-
-
-Why can your new VPC have the same IPv4 CIDR block as NextWork VPC?
-Actually, you can have multiple VPCs with the same IPv4 CIDR block in the same AWS region and account. AWS VPCs are isolated from each other by default, so there won't be any IP conflicts unless you explicitly connect them using VPC peering.
-Bottom line, it's possible for your new VPC to share the same CIDR block as an existing one, but this set up will mean your overlapping VPCs can't talk to each other directly. That's why it'd be best practice to have completely unique CIDR blocks for each VPC in your account!
-
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_1cbb1b88)
 
 ---
 
