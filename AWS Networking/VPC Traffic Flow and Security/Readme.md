@@ -9,6 +9,11 @@
 ** Linkedin: www.linkedin.com/in/arun-srinivasan-2a244325
 
 ## Project Overview
+
+* Difficulty: Mildly Spicy
+* TIme: 45 min
+* Key Concepts: Amazon VPC
+
 In VPC Traffic Flow and Security let's keep diving into the core essentials of building an Amazon Virtual Private Cloud (VPC).
 #### Get ready to:
 * Create a route table.
