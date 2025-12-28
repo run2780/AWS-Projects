@@ -43,7 +43,7 @@ One thing I didn’t expect in this project was how much fine‑grained control 
 
 ### Mission to accomplish:
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/game%20plan.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/game%20plan.png?raw=true)
 
 
 ### What is Amazon VPC?
@@ -64,7 +64,7 @@ Implementation:
 Outcome:
 * This isolated environment kept sensitive workloads secure while still allowing communication with other subnets inside the VPC.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/create_private_subnet.png?raw=true)
 
 ---
 
