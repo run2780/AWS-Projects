@@ -1,11 +1,17 @@
 ---
+
 # Testing VPC Connectivity
+
 ---
 
-**Author:** Arun Srinivasan  
-**Email:** run2780@gmail.com
+**Author:** Arun Srinivasan | December 2025  
+**Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
+                                                                                     
+## Project Overview  
 
-
+* Difficulty: Mildly Spicy
+* TIme: 2 hours
+* Key Concepts: Amazon VPC, Amazon EC2
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-connectivity_8ee57662)
 
