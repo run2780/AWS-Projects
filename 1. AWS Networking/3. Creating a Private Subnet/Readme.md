@@ -115,7 +115,7 @@ My new network ACL has two simple rules denying all inbound traffic and denying 
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_subnet_association_NACL.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/private_subnet_association_NACL.png?raw=true)
 
 
 ---
@@ -127,7 +127,7 @@ Having private subnets are useful because keeping resources away from internet i
 
 My private and public subnets cannot have the same IPV4 CIDR block i.e. same range of IP addressess. The CIDR block for every subnet must be unique and cannot overlap with another subnet.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/Error_create_subnet.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/Error_create_subnet.png?raw=true)
 
 
 ---
