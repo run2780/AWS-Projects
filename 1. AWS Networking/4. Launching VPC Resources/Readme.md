@@ -1,1 +1,157 @@
+---
+# Launching VPC Resources
+---
+
+** Author: Arun Srinivasan | December 2025  
+** Linkedin: www.linkedin.com/in/arun-srinivasan-2a244325
+
+## Project Overview
+
+* Difficulty: Mildly Spicy
+* TIme: 60 min
+* Key Concepts: Amazon VPC, Amazon EC2
+
+In this project, Launching VPC Resources, we're going to level up by launching resources into our VPC.
+Get ready to:
+* Launch an EC2 instance in your public subnet.
+* Launch an EC2 instance in your private subnet.
+* Use the Amazon VPC's wizard to create VPCs at a lightning fast pace.
+
+### How I used Amazon VPC in this project?
+
+* Launched an EC2 instance in the public subnet: Configured a public-facing EC2 instance to allow internet access through an Internet Gateway, enabling testing and external connectivity.
+* Launched an EC2 instance in the private subnet: Deployed a backend EC2 instance in a private subnet, isolated from direct internet access, ensuring secure architecture design.
+* Used the Amazon VPC wizard to create VPCs quickly: Leveraged AWS’s VPC wizard to provision a custom VPC with subnets, route tables, and gateways at lightning speed, reducing manual setup time.
+
+### Personal reflection
+Completing this project wasn’t just about setting up a VPC—it was about proving to myself that I can design, build, and reflect on cloud infrastructure with both rigor and creativity. It strengthened my confidence as a learner and gave me a foundation I can proudly showcase in my portfolio.
+
+The entire exercise, including documentation, was completed in approximately 60 minutes, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
+
+One thing I did not expected in this project was how much the VPC wizard automated for you.
+Instead of manually configuring route tables, subnets, and gateways step by step, the wizard instantly provisioned those resources in a structured way. That meant you didn’t just get a blank VPC—you got a ready‑to‑use environment with public and private subnets, route tables, and an Internet Gateway already wired up.
+
+---
+
+### What is Amazon VPC?
+
+A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix with others.
+
+## Setting Up Direct VM Access
+
+Directly accessing a virtual machine means logging into and managing the operating system or software of the machine as if you were using it in front of you, but over the internet.
+
+The AWS Management Console gives you a user-friendly interface to set up and manage AWS resources but it doesn't typically provide direct access to the operating systems of your EC2 instances. For operations that require direct OS-level access, like installing software, editing configuration files, or running scripts, you'd use your key pair to connect directly. This method of access is essential for deeper administrative tasks or specific kinds of troubleshooting that can't be performed through the console.
+
+### SSH is a key method for directly accessing a VM
+
+SSH, or Secure Shell, is the protocol we use for this secure access to a remote machine. When you connect to the instance, SSH verifies you possess the correct private key corresponding to the public key on the server, ensuring only authorized users can access the instance.
+
+In terms of network communication, SSH is also as a type of network traffic. Once SSH has established a secure connection between you and the EC2 instance, all data transmitted (including your commands and the responses from the instance) is encrypted. This encryption makes SSH an ideal method for securely exchanging confidential data e.g. login credentials!
+
+### To enable direct access, I set up key pairs
+
+What is a key pair?
+Key pairs help engineers directly access their virtual machines, like EC2 instances.
+
+How key pairs work?
+They consist of two cryptographic keys: one private and one public. The public key is installed on the virtual machine, and the private key remains with the user. When you attempt to connect, the machine uses the public key to create an encrypted challenge that can only be decrypted with the private key. Key pairs make sure that access to your EC2 instances is secure and authenticated.
+
+What is a private key's file format, which format was your private key?
+Just like how documents can be saved in various file formats like PDF, DOCX, or TXT, each suited for different applications or systems, private keys also come in different file formats. Not every system or application can process all these formats, so choosing the right one is crucial.
+The .pem format, which stands for Privacy Enhanced Mail, started off as a way to secure emails but has since become the go-to format for managing cryptographic keys because it is supported by many different types of servers e.g. EC2 instances!
+
+## Mission to accomplish
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/4.%20Launching%20VPC%20Resources/game%20plan.png?raw=true)
+
+---
+
+## Launching a public server
+
+Why are we editing the Network settings?
+
+By default, all resources are launched into the default VPC that AWS has set up for your account. We need to tell AWS that we actually want to launch this instance in MyWork VPC and the MyWork Public Subnet!
+
+How did you edit your EC2 instance's networking settings?
+
+I had to change my EC2 instance's networking settings by:
+At the Network settings panel, select Edit at the right hand corner.
+Select MyWork VPC from the drop-down in the VPC list.
+Select your public subnet.
+For the Firewall (security groups), we've already created the security group for your public subnet's resources. Choose Select existing security group.
+Select MyWork Public Security Group.
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_88727bef)
+
+---
+
+## Launching a private server
+
+In this step, I will launching another EC2 instance which is a private Server to protect my EC2 instance.
+
+Why is your private server using a different security group from your public server?
+My private server using a different security group  becaue Mywork Public security group allows in all HTTP traffic which would leave our private server much more vulnerable to security risks.
+
+Can I use the same key pair between multiple instances?
+Yes, you can use the same key pair for more than one EC2 instance! This means you can use the same private key (i.e. the .pem file) to log into any of your instances using this key pair, making it easier to manage.
+
+From a security point of view, anyone with that key can access all the instances it's connected to - making it even more important to keep your private key safe.
+
+What is my new security group's source?
+My private server security group source is my MyWork public security group which means only SSH traffic coming from resources associated with that security group would be allowed.
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_4a9e8014)
+
+---
+
+## Speeding up VPC creation
+
+I used an alternative way to set up an Amazon VPC! 
+Head back to your VPC console.
+From the left hand navigation bar, select Your VPCs.
+Select Create VPC.
+We previously stuck to creating a VPC only, but this time select VPC and more.
+A visual flow diagram pops up that shows us other VPC resources. This is called a VPC resource map!
+
+What is a VPC resource map?
+With VPC resource map, you can quickly understand the architectural layout of a VPC, like the number of subnets, which subnets are associated with which route table, and which route tables have routes to an internet gateway.
+
+Now with this handy VPC resource map, you get to see that selecting the VPC and more option will also help you create VPC resources in the exact same page. No more jumping between pages in your VPC console!
+
+
+Why can your new VPC have the same IPv4 CIDR block as NextWork VPC?
+Actually, you can have multiple VPCs with the same IPv4 CIDR block in the same AWS region and account. AWS VPCs are isolated from each other by default, so there won't be any IP conflicts unless you explicitly connect them using VPC peering.
+Bottom line, it's possible for your new VPC to share the same CIDR block as an existing one, but this set up will mean your overlapping VPCs can't talk to each other directly. That's why it'd be best practice to have completely unique CIDR blocks for each VPC in your account!
+
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_1cbb1b88)
+
+---
+
+## Speeding up VPC creation
+
+### Tips for using the VPC resource map
+
+How is it that subnets can't have overlapping CIDR blocks, but VPCs can?
+VPCs are isolated networks within AWS, meaning they don’t interact with each other unless you explicitly set up connectivity between them.
+On the other hand, subnets within a VPC are part of the same network and can directly communicate with each other. Overlapping CIDR blocks within a VPC would create IP address conflicts, making it impossible to route traffic correctly. So, subnets need unique CIDR blocks to ensure smooth internal networking.
+
+How many public subnets could you create?
+AWS's best practice advice is having more private subnets can help with organizing your resources and isolating them for security purposes, whereas public subnets are limited to ensure manageable exposure to the internet.
+Why can't I create more than two public subnets?
+The VPC wizard limits you to two public subnets to keep things straightforward. If you need more, you can always add them manually later - you can have up to 200
+
+
+NAT gateways let instances in private subnets access the internet for updates and patches, while blocking inbound traffic.
+
+For example, your private server in your private subnet might need to download security updates. By using a NAT gateway, the server can access these updates securely while remaining protected from external threats!
+
+On the other hand, internet gateways let instances in public subnets communicate with the internet both ways i.e. both inbound and outbound traffic.
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
+
+---
+
+---
 
