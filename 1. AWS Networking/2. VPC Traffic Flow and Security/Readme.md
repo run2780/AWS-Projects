@@ -56,7 +56,7 @@ One thing I didn't expect in this project was default network ACL available whic
 
 ### Mission to accomplish:
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/2.%20VPC%20Traffic%20Flow%20and%20Security/game%20plan.png?raw=true)
 
 ---
 ## Route tables
@@ -66,7 +66,7 @@ Every subnet in your VPC needs to be linked to a route table, because the table 
 
 Routes tables are needed to make a subnet public because Subnet needs to have a route to an nternet gateway in order to be considered public.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/Route%20table.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/2.%20VPC%20Traffic%20Flow%20and%20Security/Route%20table.png?raw=true)
 
 ### Route destination and target
 
