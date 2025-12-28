@@ -43,7 +43,6 @@ A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this
 
 ### How I used Amazon VPC in this project
 
-How You Used Amazon VPC in the Project?
 ### 1. Connected to my Public Server
 * Launched an EC2 instance in a public subnet of my VPC.
 * The subnet was associated with a route table that had a route to the Internet Gateway, enabling external access.
@@ -97,11 +96,9 @@ I fixed this error by updating MyWork Public Server's security group so it can l
 
 ---
 
-## Connectivity Between Servers
+## 2. Connectivity Between Servers
 
-2. Test connectivity between your EC2 instances
-In this step, 
-Get your Public Server to talk to your Private Server.
+In this step, Get your Public Server to talk to your Private Server.
 Troubleshoot for any connection issue.
 
 What is Ping?
@@ -118,50 +115,52 @@ This single line indicates that your Public Server has sent out a ping message a
 Usually, when you ping another computer successfully, you should see several replies back instantly. Each reply tells you how long it took for the message to go to the Private Server and come back.
 If you don't get any replies (that's our situation right now), or if the replies stop suddenly, it's usually a sign that there's a problem with the connection. 
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-connectivity_defghijk)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/Ping_private_server_fail.png?raw=true)
 
 ---
 
-## Troubleshooting Connectivity
+Troubleshooting Connectivity
+
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/Private_sg_not_allowing_inbound_ICMP%20traffic.png?raw=true)
 
 How did you resolve this error?
-Our route table is set up perfectly (zero issues there!), but the MyWork NACL tab shows us that all traffic inbound and outbound are denied.
+* Our route table is set up perfectly (zero issues there!), but the MyWork NACL tab shows us that all traffic inbound and outbound are denied.
 This means even if our route table correctly directs the ping to MyWork Private Server, the network ACL is checking the ping traffic at the entrance of your private subnet. If it finds that ICMP traffic is not allowed, it stops the ping there.
-Edit the inbound rules tab and add a new rule to let MyWork Public Server ping MyWork Private Server.
-Select Add new rule.
-Assign 100 as the rule number.
-Change the Type to All ICMP - IPv4.
+* Edit the inbound rules tab and add a new rule to let MyWork Public Server ping MyWork Private Server.
+* Select Add new rule.
+* Assign 100 as the rule number.
+* Change the Type to All ICMP - IPv4.
+
 What is ICMP - IPv4?
 When you set a rule for All ICMP - IPv4, you're allowing all types of ICMP messages for IPv4 addresses. This covers a wide range of operational messages that are essential for diagnosing network connectivity issues, ping requests and responses are just one type of ICMP messages.
 Set the Source to traffic coming from your public subnet - 10.0.0.0/24.
 
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/public_to_private_talk.png?raw=true)
 
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-connectivity_4a9e8014)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/Ping_private_server_Success.png?raw=true)
 
 ---
 
-## Connectivity to the Internet
+## 3. Connectivity to the Internet
 
-What does curl mean?
-Just like ping, curl is a tool to test connectivity in a network.
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/Test%20VPC%20connectivity%20with%20the%20internet.png?raw=true)
 
 I used curl to test the connectivity between my Public Server(EC2 instance) and Internet.
+What does curl mean?
+Just like ping, curl is a tool to test connectivity in a network.
 
 ### Ping vs Curl
 
 Ping and curl are different because Ping checks if one computer can contact another (and how long messages take to travel back and forwth), curl is used to transfer data to or from a server. That means on top of checking connectivity, you can use curl to grab data from, or upload data into other servers on the internet!
 
----
-
-## Connectivity to the Internet
-
 What was the successful curl command you ran?
 I ran the curl command Curl google.com which returned the complete HTML content of google.com website
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-connectivity_8ee57662)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/5.%20Testing%20VPC%20Connectivity/curl.png?raw=true)
+
 
 ---
+
 
 ---
 
