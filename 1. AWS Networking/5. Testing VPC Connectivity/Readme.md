@@ -13,6 +13,23 @@
 * TIme: 2 hours
 * Key Concepts: Amazon VPC, Amazon EC2
 
+In this project "Testing VPC Connectivity", we're going to level up by testing our VPC's connectivity.
+Get ready to:
+
+* Connect to your Public Server from the AWS Management Console.
+* Test connectivity between your EC2 instances(Public and Private)
+* Test VPC connectivity with the internet.
+
+### Personal reflection
+Working through this Amazon VPC project gave me a deeper appreciation for how cloud networking is both powerful and nuanced. At first glance, launching EC2 instances and connecting them seems straightforward, but I quickly realized that every detail in the VPC configuration—whether it’s a route table, security group, or NACL—plays a critical role in determining connectivity.
+
+* Building confidence in fundamentals: Successfully connecting to my public server and verifying internet access reinforced my understanding of how Internet Gateways and route tables enable external communication. It was rewarding to see theory translate into practice.
+* Troubleshooting as a growth opportunity: When my initial ping test failed, I had to dig into NACL rules. This experience taught me that even small misconfigurations can block traffic, and that patience and systematic troubleshooting are essential skills in cloud engineering.
+* Appreciating the difference between SGs and NACLs: I didn’t expect the stateless nature of NACLs to be so impactful. Learning how they differ from stateful Security Groups gave me a clearer mental model of AWS networking.
+* Efficiency through hands-on practice: Completing the setup and resolving errors within two hours showed me how practice accelerates learning. Each step—from SSH access to curl tests—helped me build confidence in applying AWS concepts quickly.
+* Professional takeaway: Beyond technical skills, this project reminded me of the importance of documenting my process. Clear notes on what worked, what failed, and how I fixed issues will strengthen my portfolio and demonstrate problem-solving ability to future employers.
+
+The entire exercise, including documentation, was completed in approximately 2 hours, reflecting both my grasp of the theoretical concepts and my ability to apply them effectively in practice. This project reinforced my confidence in working with AWS networking components and highlighted the importance of structured planning when building cloud infrastructure.
 ---
 
 ### What is Amazon VPC?
