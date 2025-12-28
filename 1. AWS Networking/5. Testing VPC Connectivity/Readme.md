@@ -13,11 +13,7 @@
 * TIme: 2 hours
 * Key Concepts: Amazon VPC, Amazon EC2
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-connectivity_8ee57662)
-
 ---
-
-## Introducing Today's Project!
 
 ### What is Amazon VPC?
 
