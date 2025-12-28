@@ -76,13 +76,13 @@ By default, all resources are launched into the default VPC that AWS has set up 
 How did you edit your EC2 instance's networking settings?
 
 I had to change my EC2 instance's networking settings by:
-At the Network settings panel, select Edit at the right hand corner.
-Select MyWork VPC from the drop-down in the VPC list.
-Select your public subnet.
-For the Firewall (security groups), we've already created the security group for your public subnet's resources. Choose Select existing security group.
+* At the Network settings panel, select Edit at the right hand corner.
+* Select MyWork VPC from the drop-down in the VPC list.
+* Select your public subnet.
+* For the Firewall (security groups), we've already created the security group for your public subnet's resources. Choose Select existing security group.
 Select MyWork Public Security Group.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_88727bef)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/4.%20Launching%20VPC%20Resources/Public%20server%20create.png?raw=true)
 
 ---
 
@@ -101,7 +101,7 @@ From a security point of view, anyone with that key can access all the instances
 What is my new security group's source?
 My private server security group source is my MyWork public security group which means only SSH traffic coming from resources associated with that security group would be allowed.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_4a9e8014)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/4.%20Launching%20VPC%20Resources/Private%20Security%20group%20settings.png?raw=true)
 
 ---
 
@@ -125,7 +125,7 @@ Actually, you can have multiple VPCs with the same IPv4 CIDR block in the same A
 Bottom line, it's possible for your new VPC to share the same CIDR block as an existing one, but this set up will mean your overlapping VPCs can't talk to each other directly. That's why it'd be best practice to have completely unique CIDR blocks for each VPC in your account!
 
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_1cbb1b88)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/4.%20Launching%20VPC%20Resources/VPC%20create%20wizard.png?raw=true)
 
 ---
 
@@ -149,7 +149,6 @@ For example, your private server in your private subnet might need to download s
 
 On the other hand, internet gateways let instances in public subnets communicate with the internet both ways i.e. both inbound and outbound traffic.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-ec2_8ee57662)
 
 ---
 
