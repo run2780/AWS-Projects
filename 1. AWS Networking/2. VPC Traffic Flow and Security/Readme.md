@@ -90,7 +90,7 @@ Security groups are responsible for checking who comes in and out. They have str
 
 Protocols: With VPCs as our city and every resource as a building, think of protocols as different vehicles, like buses, taxis and trucks, to deliver data in different ways. Protocols are special rules that help data move across the internet, each designed to send data for a specific kind of task. 
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-security_92b0b0b4)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/2.%20VPC%20Traffic%20Flow%20and%20Security/Security%20group_create.png?raw=true)
 
 ### Inbound vs Outbound rules
 
@@ -130,7 +130,7 @@ Just like security groups, network ACLs use inbound and outbound rules to decide
 The second line in each ruleset shows an asterisk (*) that acts as a catch-all rule in case traffic does not match any of the earlier rules. In our case, since Rule 100 already allows all traffic, the asterisk rule won't actually come into play.
 This means default network ACLs allow all inbound and outbound traffic, unless customized.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/2.%20VPC%20Traffic%20Flow%20and%20Security/inbound%20rules.png?raw=true)
 
 ### Recap
 
