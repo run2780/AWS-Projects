@@ -28,7 +28,7 @@ The entire exercise, including documentation, was completed in approximately 45 
 
 ---
 ### Mission to accomplish:
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/VPC_architecture.png?raw=true)
 
 ---
 
@@ -50,7 +50,7 @@ You can use some AWS services like Amazon S3 or AWS Lambda without setting up a 
 ##### Why there is a default VPC in AWS accounts
 There was already a default VPC in my account ever since my AWS account was created. This is because AWS has set up a default VPC to allow me to deploy resources like EC2 instances or RDS databases right away without having to create my own VPC from scratch.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/create%20vpc.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/create%20vpc.png?raw=true)
 
 ##### Defining IPv4 CIDR blocks
 
@@ -72,7 +72,7 @@ Public subnets are open areas, while private subnets are restricted. Each subnet
 Subnets could be private or public. The difference between public and private subnets are: A public subnet is connected to the internet. Resources inside a public subnet can communicate with external networks. A private subnet does not have direct internet access.
 You'd use it for internal resources that don’t need to be publicly accessible. Why your subnet is not considered a public subnet yet? Though we have labelled our Subnet as "Public1", it is still not a public subnet as it is not yet connected to internet gateway. For a subnet to be considered public, it has to connect to an internet gateway.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/create_subnet_panel.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/create_subnet_panel.png?raw=true)
 
 ##### Auto-assigning public IPv4 addresses
 Once I created my subnet, I enabled auto-assign public IPv4 addresses. By default, your resources already have private IP addresses, but this only allows internal communication within your VPC. To access the internet or be accessible from the internet, the instance would need a public IP address. When you enable auto-assign public IPv4 address for a subnet, any EC2 instance launched in that subnet will instantly get a public IP address so you won't have to create one manually - a huge time saver!
@@ -87,7 +87,7 @@ Last step in this project - let's attach your VPC with an internet gateway. This
 An internet gateway connects your city (VPC) and the outside world (internet).Internet gateways are key to making applications available on the internet. By attaching an internet gateway, your instances can access the internet and be accessible to external users.
 Attaching an internet gateway means resources in your VPC can now access the internet. The EC2 instances with public IP addresses also become accessible to users, so your applications hosted on those servers become public too.
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/internet%20gateway%20panel.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/internet%20gateway%20panel.png?raw=true)
 
 ---
 
@@ -105,7 +105,7 @@ Let's create a new VPC with the CIDR block 10.0.0.0/24. To set up a VPC or a sub
 “aws ec2 create-vpc --cidr-block 10.0.0.0/24 --query Vpc.VpcId --output text” 
 Make sure to avoid errors by including CIDR block. Initially error came when CIDR block was not mentioned. 
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/vpc_create_error_CLI.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/vpc_create_error_CLI.png?raw=true)
 
 ##### Why does the command start with “aws ec2”? Aren't we creating a VPC? 
 VPCs were originally designed for setting up private networks for EC2 instances! VPCs are now essential for a wider range of services, but they were initially tied to EC2, so their CLI commands still start with “aws ec2”. Break down of this command: aws ec2tells the CLI we want to use the EC2 service.
@@ -113,7 +113,7 @@ VPCs were originally designed for setting up private networks for EC2 instances!
 --cidr-block 10.0.0.0/24 sets up the CIDR block for the VPC we're creating.
 --queryVpc.VpcId --output text asks the terminal to format its response as plain text and only show the VPC ID (instead of all the other data is usually shows).
 
-![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Build%20a%20Virtual%20Private%20Cloud/cloudshell_CLI.png?raw=true)
+![Image Alt](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/1.%20Build%20a%20Virtual%20Private%20Cloud/cloudshell_CLI.png?raw=true)
 
 ### Comparing Cloud Shell vs. AWS Console
 Cloud Shell is an excellent middle-ground that provides the power of the CLI without the overhead of local setup and authentication. It is particularly useful for debugging resources within private networks, potentially replacing traditional bastion hosts. The Cloud Console (GUI) is the most intuitive for visual learners and simple, one-off tasks, but it becomes cumbersome for complex or repetitive configurations. Overall, I preferred Cloud console because it is highly scriptable (Bash, Python) for repeatable tasks
