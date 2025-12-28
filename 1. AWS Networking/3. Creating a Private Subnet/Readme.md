@@ -79,7 +79,7 @@ Implementation:
 Outcome:
 * Resources in the private subnet could reach the internet indirectly (via NAT) but remained unreachable from outside. In this project, I did not set up NAT gateway.
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/Private%20route%20table.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/Private%20route%20table.png?raw=true)
 
 ##### A dedicated route table
 
@@ -111,9 +111,9 @@ I set up a dedicated network ACL for my private subnet that restricts traffic an
 
 My new network ACL has two simple rules denying all inbound traffic and denying all outbound traffic!
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/private_NACL_inbound.png?raw=true)
 
-![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/3.%20Creating%20a%20Private%20Subnet/private_NACL_outbound.png?raw=true)
 
 ![Image](https://github.com/run2780/AWS-Projects/blob/main/AWS%20Networking/Creating%20a%20Private%20Subnet/private_subnet_association_NACL.png?raw=true)
 
