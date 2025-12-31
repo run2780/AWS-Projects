@@ -133,13 +133,14 @@ Successful tests confirm that traffic flows in both directions, demonstrating th
 
 #### Connect to EC2 Instance 1
 
-In this step, I will trying to connect my EC2 instance1
-I was stopped from using EC2 Instance Connect.
+In this step, I will trying to connect my EC2 instance1. I was stopped from using EC2 Instance Connect.
 
 ##### Troubleshooting Instance Connect
 
 I was stopped from using EC2 Instance Connect as "No public IPv4 address assigned. With no public IPv4 address, you can't use EC2 Instance Connect."
 keeping Disable for the Auto-assign IP address option in our EC2 instance's network settings caused this error!
+
+To resolve this error, set up Elastic IP address/
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_7685490c)
 
@@ -157,24 +158,14 @@ Associating an Elastic IP address to the EC2 instance 1 resolved the error becau
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_45663498)
 
 
-Now the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
+Now the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance1.
+Try connecting to the EC2 instance again and see if the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
 
-1 and see if the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
-
-### Step 7 - Test VPC Peering
+###  Test VPC Peering
 
 In this step, I will get Instance 1 to send test messages to Instance 2. Solve connection errors until Instance 2 is able to send messages back.
 
----
-
-
-
----
-
-
----
-
-## Troubleshooting ping issues
+#### Troubleshooting ping issues
 
 What was the command you ran to test VPC peering?
 To test VPC peering, I ran the command ping 10.2.13.225 which is the Private IP address of MyWork VPC2
@@ -186,15 +177,13 @@ If you receive a response quickly, it means the connection between your computer
 
 How did you update your instance's security group inbound rules?
 I had to update my second EC2 instance's security group because this security group allow ICMP traffic from sources outside of VPC 2
-Let's fix this by letting inbound ICMP traffic from VPC 1.
-Select Edit inbound rules.
-Select Add new rule.
-Change the Type to All ICMP - IPv4.
-Set the Source to traffic coming from VPC 1 - 10.1.0.0/16
+* Let's fix this by letting inbound ICMP traffic from VPC 1.
+* Select Edit inbound rules.
+* Select Add new rule.
+* Change the Type to All ICMP - IPv4.
+* Set the Source to traffic coming from VPC 1 - 10.1.0.0/16
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_7a29d352)
-
----
 
 ---
 
