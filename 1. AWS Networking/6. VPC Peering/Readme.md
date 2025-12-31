@@ -90,7 +90,8 @@ Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resourc
 ### Step 2 - Create a Peering Connection
 In this step, I will create a VPC peering connection between VPC1 and VPC2 to enable communication using private IPv4 addresses.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/6.%20VPC%20Peering/create_peering%20page.png?raw=true)
+
 
 A VPC peering connection is a direct connection between two VPCs.
 A peering connection lets VPCs and their resources route traffic between them using their private IP addresses. This means data can now be transferred between VPCs without going through the public internet.
@@ -100,7 +101,7 @@ Without a peering connection, data transfers between VPCs would use resources' p
 In VPC peering, the Requester is the VPC that initiates a peering connection. As the requester, they will be sending the other VPC an invitation to connect!
 In VPC peering, the Accepter is the VPC that receives a peering connection request! The Accepter can either accept or decline the invitation. This means the peering connection isn't actually made until the other VPC also agrees to it!
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_1cbb1b88)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/6.%20VPC%20Peering/Peering_Accept.png?raw=true)
 
 ### Step 3 - Update Route Tables
 In this step, I will configure routing so that traffic from VPC1 can reach VPC2, and traffic from VPC2 can reach VPC1.
@@ -110,7 +111,7 @@ Even if your peering connection has been accepted, traffic in VPC 1 won't know h
 * Under Target, select Peering Connection.
 * Select VPC 1 <> VPC 2. which is the created VPC peering connection name.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_4a9e8014)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/6.%20VPC%20Peering/VPC2_Route%20tab.png?raw=true)
 
 
 ### Step 4 - Launch EC2 Instances
