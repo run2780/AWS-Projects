@@ -84,6 +84,8 @@ In this step, I will create two VPCs along with their components using the VPC c
 
 Repeat the steps for VPC2 creation, but change the IPV4 CIDR block to 10.2.0.0/16
 
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/6.%20VPC%20Peering/VPC2%20Resource%20map.png?raw=true)
+
 Why do we need to have a unique IPV4 CIDR block for each VPC?
 Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resources don't overlap. Having overlapping IP addresses could cause routing conflicts and connectivity issues!
 
@@ -121,8 +123,6 @@ Why did you choose not to set up key pairs?
 In previous projects, setting up a key pair was a key step for learning how SSH and directly accessing an EC2 instance works.
 However, we've also learnt that with EC2 Instance Connect, AWS actually manages a key pair for us! We don't need to manage key pairs ourselves. Since we've already learnt how to set up key pairs twice in the last two projects, we don't need to do it again this time.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_11111111)
-
 
 ---
 
@@ -136,14 +136,14 @@ Successful tests confirm that traffic flows in both directions, demonstrating th
 
 In this step, I will trying to connect my EC2 instance1. I was stopped from using EC2 Instance Connect.
 
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_7685490c)
+
 ##### Troubleshooting Instance Connect
 
 I was stopped from using EC2 Instance Connect as "No public IPv4 address assigned. With no public IPv4 address, you can't use EC2 Instance Connect."
 keeping Disable for the Auto-assign IP address option in our EC2 instance's network settings caused this error!
 
 To resolve this error, set up Elastic IP address/
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_7685490c)
 
 ## Elastic IP addresses
 
