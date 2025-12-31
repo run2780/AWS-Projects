@@ -5,35 +5,43 @@
 **Author:** Arun Srinivasan | December 2025  
 **Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
 
-## Project Overview
+## Project Overview  
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
+* Difficulty: Mildly Spicy
+* TIme: 90 minutes
+* Key Concepts: Amazon VPC, Amazon EC2, VPC Peering connections, Elastic IP addresses
+
+In this project, VPC Peering we're going to level up by setting up VPC Peering - we're going to play with TWO VPCs instead of one!
+In this project,get ready to:
+* Set up multiple VPCs.
+* Create a VPC peering connection - i.e. get two VPCs to talk to each other!
+* Test VPC peering with connectivity tests.
+
+### Personal reflection
+Working on this project gave me a deeper appreciation for how AWS networking concepts translate into real-world connectivity challenges. Setting up multiple VPCs and then configuring a peering connection between them felt like building bridges between isolated islands—each VPC was secure and independent, but the peering link allowed them to communicate seamlessly.
+One of the most valuable lessons I learned was the importance of route tables. Initially, I assumed that once the peering connection was established, traffic would automatically flow. Discovering that bidirectional routing required explicit updates to both VPCs’ route tables was eye-opening. It reinforced how critical it is to think not just about connections, but also about the paths traffic must take to move successfully.
+The hands-on validation—launching EC2 instances in each VPC and testing connectivity—was particularly satisfying. Watching the ping responses succeed after carefully configuring the routes gave me a sense of accomplishment and confidence in my troubleshooting process.
+
+Completing this project in about 90 minutes, including documentation, showed me how far I’ve come in balancing technical execution with clear communication.
+Overall, this project strengthened my understanding of VPC architecture, peering, and routing fundamentals.
 
 ---
-
-## Introducing Today's Project!
 
 ### What is Amazon VPC?
 
 A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix withothers.
 
 ### How I used Amazon VPC in this project
-
-How did you use Amazon VPC in today's project?
-Set up multiple Amazon VPCs to simulate isolated network environments.
-
-Configured VPC peering to establish secure communication between VPCs using private IPv4 addressing.
-
-Validated connectivity by deploying EC2 instances in each VPC and performing bidirectional traffic tests.
-
-### One thing I didn't expect in this project was...
+* Created multiple VPCs: I set up two separate Virtual Private Clouds to simulate isolated network environments, ensuring each had its own subnets and routing components.
+* Configured VPC Peering: I established a peering connection between the two VPCs, enabling secure communication using private IPv4 addresses.
+* Updated route tables: I added explicit routes in both VPCs so traffic could flow bidirectionally across the peering link. This step was critical to making the connection functional.
+* Launched EC2 instances: I deployed one EC2 instance in each VPC to serve as test endpoints.
+* Validated connectivity: I performed bidirectional traffic tests (like pinging between instances) to confirm that the peering setup worked as expected.
 
 What is one thing you didn't expect in this project?
 One thing I didn’t expect in this project was how important it is to update the route tables in both VPCs after creating the peering connection. Without those entries, the peering link exists but traffic won’t flow 
 
-### This project took me...
-
-This project took me around 1 hour and 30 min including documentation
+### Mission to accomplish:
 
 ---
 
@@ -87,6 +95,7 @@ However, we've also learnt that with EC2 Instance Connect, AWS actually manages 
 ---
 
 ## VPC Peering
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
 
 A VPC peering connection is a direct connection between two VPCs.
 
