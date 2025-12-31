@@ -43,6 +43,7 @@ One thing I didn’t expect in this project was how important it is to update th
 
 ### Mission to accomplish:
 
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_11111111)
 ---
 
 ## In the first part of my project...
