@@ -43,10 +43,9 @@ One thing I didn’t expect in this project was how important it is to update th
 
 ### Mission to accomplish:
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_11111111)
----
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/6.%20VPC%20Peering/game%20plan.png?raw=true)
 
-## In the first part of my project...
+---
 
 ### Step 1 - Set up my VPC
 
@@ -64,28 +63,54 @@ In this step, I will configure routing so that traffic from VPC1 can reach VPC2,
 
 In this step, I will launch an EC2 instance in each VPC, which will later be used to test the VPC peering connection.
 
+### Step 5 - Validate connectivity
+In this step, I will perform bidirectional traffic tests (like pinging between instances) to confirm that the peering setup worked as expected.
+
 ---
 
 ## Multi-VPC Architecture
 
 I started my project by:
-Log in to your AWS Account with your IAM Admin User.
-Head to your VPC console - search for VPC at the search bar at top of your page.
-From the left hand navigation bar, select Your VPCs.
-Select Create VPC.
-select VPC and more.
-Enter the VPC name
-The VPC's IPv4 CIDR block is already pre-filled to 10.0.0.0/16 - change that to 10.1.0.0/16
-Choose number of Availability Zone as 1
-Make sure public Subnet chosen is 1 and private subnet as 0.
-Choose NAT gateway as None and VPC endpoints as None.
+* Log in to your AWS Account with your IAM Admin User.
+* Head to your VPC console - search for VPC at the search bar at top of your page.
+* From the left hand navigation bar, select Your VPCs.
+* Select Create VPC.
+* select VPC and more.
+* Enter the VPC name
+* The VPC's IPv4 CIDR block is already pre-filled to 10.0.0.0/16 - change that to 10.1.0.0/16
+* Choose number of Availability Zone as 1
+* Make sure public Subnet chosen is 1 and private subnet as 0.
+* Choose NAT gateway as None and VPC endpoints as None.
 
 Repeat the steps for VPC2 creation, but change the IPV4 CIDR block to 10.2.0.0/16
 
-
+Why do we need to have a unique IPV4 CIDR block for each VPC?
 Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resources don't overlap. Having overlapping IP addresses could cause routing conflicts and connectivity issues!
 
-### I also launched 2 EC2 instances
+## VPC Peering
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
+
+A VPC peering connection is a direct connection between two VPCs.
+A peering connection lets VPCs and their resources route traffic between them using their private IP addresses. This means data can now be transferred between VPCs without going through the public internet.
+Without a peering connection, data transfers between VPCs would use resources' public address - meaning VPCs have to communicate over the public internet. 
+
+### VPC Peering - Requestor Vs Acceptor
+In VPC peering, the Requester is the VPC that initiates a peering connection. As the requester, they will be sending the other VPC an invitation to connect!
+In VPC peering, the Accepter is the VPC that receives a peering connection request! The Accepter can either accept or decline the invitation. This means the peering connection isn't actually made until the other VPC also agrees to it!
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_1cbb1b88)
+
+## Updating route tables
+
+Even if your peering connection has been accepted, traffic in VPC 1 won't know how to get to resources in VPC 2 without a route in your route table! You need to set up a route that directs traffic bound for VPC 2 to the peering connection you've set up.
+* Add a new route to VPC 2 by entering the CIDR block 10.1.0.0/16 as our Destination.
+* Under Target, select Peering Connection.
+* Select VPC 1 <> VPC 2. which is the created VPC peering connection name.
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_4a9e8014)
+
+
+### Launch 2 EC2 instances
 
 Why did you choose not to set up key pairs?
 In previous projects, setting up a key pair was a key step for learning how SSH and directly accessing an EC2 instance works.
@@ -95,32 +120,10 @@ However, we've also learnt that with EC2 Instance Connect, AWS actually manages 
 
 ---
 
-## VPC Peering
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
 
-A VPC peering connection is a direct connection between two VPCs.
-
-A peering connection lets VPCs and their resources route traffic between them using their private IP addresses. This means data can now be transferred between VPCs without going through the public internet.
-
-Without a peering connection, data transfers between VPCs would use resources' public address - meaning VPCs have to communicate over the public internet. 
-
-In VPC peering, the Requester is the VPC that initiates a peering connection. As the requester, they will be sending the other VPC an invitation to connect!
-
-In VPC peering, the Accepter is the VPC that receives a peering connection request! The Accepter can either accept or decline the invitation. This means the peering connection isn't actually made until the other VPC also agrees to it!
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_1cbb1b88)
 
 ---
 
-## Updating route tables
-
-Even if your peering connection has been accepted, traffic in VPC 1 won't know how to get to resources in VPC 2 without a route in your route table! You need to set up a route that directs traffic bound for VPC 2 to the peering connection you've set up.
-
-Add a new route to VPC 2 by entering the CIDR block 10.1.0.0/16 as our Destination.
-Under Target, select Peering Connection.
-Select VPC 1 <> VPC 2.
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_4a9e8014)
 
 ---
 
