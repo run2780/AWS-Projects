@@ -68,9 +68,9 @@ In this step, I will perform bidirectional traffic tests (like pinging between i
 
 ---
 
-## Multi-VPC Architecture
+## Step 1 - Set up my VPC - Multi-VPC Architecture
+In this step, I will create two VPCs along with their components using the VPC creation wizard, as I need to test the connectivity between them through a VPC peering connection.
 
-I started my project by:
 * Log in to your AWS Account with your IAM Admin User.
 * Head to your VPC console - search for VPC at the search bar at top of your page.
 * From the left hand navigation bar, select Your VPCs.
@@ -87,7 +87,9 @@ Repeat the steps for VPC2 creation, but change the IPV4 CIDR block to 10.2.0.0/1
 Why do we need to have a unique IPV4 CIDR block for each VPC?
 Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resources don't overlap. Having overlapping IP addresses could cause routing conflicts and connectivity issues!
 
-## VPC Peering
+### Step 2 - Create a Peering Connection
+In this step, I will create a VPC peering connection between VPC1 and VPC2 to enable communication using private IPv4 addresses.
+
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_88727bef)
 
 A VPC peering connection is a direct connection between two VPCs.
@@ -100,7 +102,8 @@ In VPC peering, the Accepter is the VPC that receives a peering connection reque
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_1cbb1b88)
 
-## Updating route tables
+### Step 3 - Update Route Tables
+In this step, I will configure routing so that traffic from VPC1 can reach VPC2, and traffic from VPC2 can reach VPC1.
 
 Even if your peering connection has been accepted, traffic in VPC 1 won't know how to get to resources in VPC 2 without a route in your route table! You need to set up a route that directs traffic bound for VPC 2 to the peering connection you've set up.
 * Add a new route to VPC 2 by entering the CIDR block 10.1.0.0/16 as our Destination.
@@ -110,7 +113,8 @@ Even if your peering connection has been accepted, traffic in VPC 1 won't know h
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_4a9e8014)
 
 
-### Launch 2 EC2 instances
+### Step 4 - Launch EC2 Instances
+In this step, I will launch an EC2 instance in each VPC, which will later be used to test the VPC peering connection.
 
 Why did you choose not to set up key pairs?
 In previous projects, setting up a key pair was a key step for learning how SSH and directly accessing an EC2 instance works.
@@ -118,50 +122,26 @@ However, we've also learnt that with EC2 Instance Connect, AWS actually manages 
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_11111111)
 
----
-
-
 
 ---
 
+### Step 5 - Validate connectivity
+In this step, I will verify the VPC peering configuration by performing bidirectional traffic tests between the EC2 instances deployed in each VPC. 
+Using EC2 Instance Connect, I will securely access the instance in VPC1 and initiate connectivity checks (such as pinging the private IP of the instance in VPC2).
+This validation ensures that the peering connection is not only established but also correctly configured with the necessary route table entries, allowing seamless communication between both VPCs. 
+Successful tests confirm that traffic flows in both directions, demonstrating the effectiveness of the peering setup.
 
----
+#### Connect to EC2 Instance 1
 
-## In the second part of my project...
+In this step, I will trying to connect my EC2 instance1
+I was stopped from using EC2 Instance Connect.
 
-### Step 5 - Use EC2 Instance Connect
-
-In this step, I will be connecting to VPC1 and test the connectivity to VP2 using VPC peering.
-
-### Step 6 - Connect to EC2 Instance 1
-
-In this step, I will trying to connect my EC2 instance 1 and see if the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
-
-### Step 7 - Test VPC Peering
-
-In this step, I will get Instance 1 to send test messages to Instance 2. Solve connection errors until Instance 2 is able to send messages back.
-
----
-
-## Troubleshooting Instance Connect
-
-Why are you using EC2 Instance Connect?
-Next, I used EC2 Instance Connect to:
-EC2 Instance Connect is a shortcut way to get direct SSH access to your EC2 instance!
-When you use SSH to connect to an EC2 instance, you usually have to:
-Generate a key pair (public and private keys).
-Associate the public key with your EC2 instance.
-Securely store the private key on your local machine.
-Set up an SSH client (a software that can handle the SSH protocol), provide it your private key, and establish a secure connection to your EC2 instance.
-EC2 Instance Connect is an alternative way to use SSH - Instance Connect lets you securely connect to your EC2 instances directly using the AWS Management Console. You're still using SSH, but with all the key management handling it for you. This takes away a lot of the complexity of setting up SSH.
+##### Troubleshooting Instance Connect
 
 I was stopped from using EC2 Instance Connect as "No public IPv4 address assigned. With no public IPv4 address, you can't use EC2 Instance Connect."
-
 keeping Disable for the Auto-assign IP address option in our EC2 instance's network settings caused this error!
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_7685490c)
-
----
 
 ## Elastic IP addresses
 
@@ -175,6 +155,22 @@ How did Elastic IP addresses solve the connection error?
 Associating an Elastic IP address to the EC2 instance 1 resolved the error because If you want to connect to your instance over EC2 Instance Connect, then your instance must have a public IP address and be in a public subnet. This is because using EC2 Instance Connect connects to your server over the internet by default. 
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-peering_45663498)
+
+
+Now the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
+
+1 and see if the the IPV4 address eeror got fixed and see if any other errors pops out in connecting to the instance.
+
+### Step 7 - Test VPC Peering
+
+In this step, I will get Instance 1 to send test messages to Instance 2. Solve connection errors until Instance 2 is able to send messages back.
+
+---
+
+
+
+---
+
 
 ---
 
