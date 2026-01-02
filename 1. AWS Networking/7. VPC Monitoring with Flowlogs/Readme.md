@@ -47,7 +47,7 @@ In today's project, I used Amazon VPC to
 
 ## Mission to accomplish:
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_e7fa8775)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/Game%20plan.png?raw=true)
 
 ---
 
@@ -74,19 +74,17 @@ What are we doing in this step?
 VPC Flow Logs doesn't have the permission to write logs and send them to CloudWatch... yet.
 Let's give Flow Logs the permission to do both, using the power of IAM roles and policies!
 
-
-
 ---
 
-## Multi-VPC Architecture
+## Step 1 - Set up VPCs - Multi-VPC Architecture
 
 What did you launch in this step? How many subnets did you create?
-I started my project by launching two VPCs. We created two public Subnets. i.e, One public subnet in each VPC with no private subnets
+I started my project by launching two VPCs. We created two public Subnets. i.e, One public subnet in each VPC with no private subnets.
 
 Why are the IPv4 CIDR blocks for VPCs 1 and 2 unique?
 Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resources don't overlap. Having overlapping IP addresses could cause routing conflicts and connectivity issues!
 
-### I also launched EC2 instances in each subnet
+I also launched EC2 instances in each subnet.
 
 We were trying to connect VPC1 instance using SSH through EC2 instance which is trying to connect to your instance over the internet. Your default Security group allows only inbound traffic from within the VPC, so traffic from the internet being cut-off.
 You have to allow inbound SSH traffic on Port 22.
@@ -97,7 +95,7 @@ For VPC2 instance, add new inbound rule to allow ICMP traffic.
 Edit inbound rule and Select Add rule
 For the new rule, add type as "ALL ICMP - IPV4" and source as "CIDR block of VPC instance 1" which is 10.1.0.0/16
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_e7fa8775)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/VPC2_Resource%20map.png?raw=true)
 
 ---
 
