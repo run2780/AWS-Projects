@@ -77,7 +77,6 @@ Let's give Flow Logs the permission to do both, using the power of IAM roles and
 ---
 
 ## Step 1 - Set up VPCs - Multi-VPC Architecture
-
 What did you launch in this step? How many subnets did you create?
 I started my project by launching two VPCs. We created two public Subnets. i.e, One public subnet in each VPC with no private subnets.
 
