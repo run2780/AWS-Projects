@@ -2,14 +2,40 @@
 # VPC Monitoring with Flow Logs
 
 ---
-**Author:** Arun Srinivasan  
-**Email:** run2780@gmail.com
+**Author:** Arun Srinivasan | December 2025  
+**Linkedin:** www.linkedin.com/in/arun-srinivasan-2a244325
+                                                                                     
+## Project Overview  
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_3e1e79a1)
+* Difficulty: It's Getting Spicy..
+* TIme: 90 hours
+* Key Concepts: Amazon VPC, Amazon EC2, Amazon CloudWatch
+
+## Project Overview  
+
+* Difficulty: It's getting spicy..
+* TIme: 2 hours
+* Key Concepts: Amazon VPC, Amazon EC2
+
+In this project "VPC Monitoring with Flow Logs", Let’s kick off network monitoring by adding tracking tools to our VPC set up
+Get ready to:
+* Set up two VPCs and test their peering connection.
+* Set up VPC Flow Logs that collect network traffic data.
+* Analyse network traffic using CloudWatch's Log Insights.
+
+### Personal reflection
+Working on this project was both challenging and rewarding. Setting up two VPCs, configuring peering, and enabling Flow Logs gave me a deeper appreciation for how AWS networking components interact. At first, I assumed enabling Flow Logs would be straightforward, but discovering the need for IAM roles and policies reminded me that AWS emphasizes security and explicit permissions at every step. 
+Troubleshooting connectivity between the EC2 instances was another valuable learning moment. When my first ping test failed, I realized how critical route tables and security group rules are in determining whether traffic flows as expected. Updating the route tables after creating the peering connection felt like a breakthrough—it was satisfying to see the ping replies come through once the architecture was correctly configured.
+
+Analyzing Flow Logs in CloudWatch gave me visibility into the network traffic I had generated. Seeing rejected and later accepted requests in the logs made the abstract idea of “monitoring” very concrete.
+Overall, this project strengthened my confidence in AWS networking fundamentals. I learned to approach problems systematically: check permissions, verify routing, and use logs as a diagnostic tool.
+
+One thing you probably didn’t expect in this project was that VPC Flow Logs couldn’t immediately write to CloudWatch without extra permissions.
+At first glance, it feels like enabling flow logs should be a simple toggle—create the log group, attach the flow log, and done. But then you hit that surprise moment: AWS requires you to set up an IAM policy and role so Flow Logs can actually send data to CloudWatch.
+
+This project took me 90 minutes to set up VPC and its components including public and private instances. Then troubleshoot for errors and establish the monitoring that we intended to in this project.
 
 ---
-
-## Introducing Today's Project!
 
 ### What is Amazon VPC?
 
@@ -18,22 +44,12 @@ A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this
 ### How I used Amazon VPC in this project
 
 In today's project, I used Amazon VPC to
-Created two VPCs, each with unique IPv4 CIDR blocks (10.1.0.0/16 and 10.2.0.0/16). This ensured no overlapping IP ranges, which is critical for routing and connectivity.
-Configured subnets: Each VPC had a public subnet, allowing EC2 instances to be launched with public IPs for connectivity testing.
-Launched EC2 instances: Deployed one instance in each VPC, then configured security groups to allow ICMP (ping) and SSH traffic. This gave you real network activity to monitor.
-Tested VPC peering: By connecting the two VPCs, you validated that traffic could flow between them, revisiting concepts from your earlier peering project.
-Enabled VPC Flow Logs: Attached flow logs to your VPCs to capture inbound and outbound traffic at the network interface level.
-Integrated with CloudWatch: Flow logs were sent to a CloudWatch Log Group, where you could analyze traffic patterns, blocked requests, and overall network health.
-
-### One thing I didn't expect in this project was...
-
-One thing you probably didn’t expect in this project was that VPC Flow Logs couldn’t immediately write to CloudWatch without extra permissions.
-At first glance, it feels like enabling flow logs should be a simple toggle—create the log group, attach the flow log, and done. But then you hit that surprise moment: AWS requires you to set up an IAM policy and role so Flow Logs can actually send data to CloudWatch.
-
-### This project took me...
-
-How much time did this project take you?
-This project took me 90 minutes including documentation.
+* Created two VPCs, each with unique IPv4 CIDR blocks (10.1.0.0/16 and 10.2.0.0/16). This ensured no overlapping IP ranges, which is critical for routing and connectivity.
+* Configured subnets: Each VPC had a public subnet, allowing EC2 instances to be launched with public IPs for connectivity testing.
+* Launched EC2 instances: Deployed one instance in each VPC, then configured security groups to allow ICMP (ping) and SSH traffic. This gave you real network activity to monitor.
+* Tested VPC peering: By connecting the two VPCs, you validated that traffic could flow between them, revisiting concepts from your earlier peering project.
+* Enabled VPC Flow Logs: Attached flow logs to your VPCs to capture inbound and outbound traffic at the network interface level.
+* Integrated with CloudWatch: Flow logs were sent to a CloudWatch Log Group, where you could analyze traffic patterns, blocked requests, and overall network health.
 
 ---
 
