@@ -141,11 +141,8 @@ Since we're trying to get our instances to talk to each other, this means we're 
 #### Connectivity troubleshooting
 
 My first ping test between my EC2 instances had no replies, which means ICMP traffic could be blocked, colud be blocked by security group/ACL network ir may be our traffic might be routed to a wrong path.
-
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_99d4ba42)
-
-What does this ping response mean?
 I could receive ping replies if I ran the ping test using the other instance's public IP address, which means our second instance is actually allowing ICMP traffic.
+
 Why did the ping test using Instance 2's private address fail?
 Looking at VPC 1's route table, I identified that the ping test with Instance 2's private address failed because we do not have a route in our VPC's route table that directs traffic from VPC to another.
 
@@ -164,11 +161,13 @@ Update VPC 1's route table as below
 * Under Target, select Peering Connection.
 * Select VPC 1 <> VPC 2.
 
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/VPC1_route%20table.png?raw=true)
+
 What do the successful ping replies indicate?
 I received ping replies from Instance 2's private IP address! This means I have successfully resolved the connectivity issue by setting up a peering architecture between VPC 1 and VPC 2!
 Now, VPC1 is able to communicate with VPC2 using private IP address
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_4ec7821f)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/ping%20response.png?raw=true)
 
 ---
 
@@ -184,9 +183,8 @@ Flow logs tell us about the source and destinatiion of the network traffic, the 
 What does your screenshotted flow log tell you?
 For example, the flow log I've captured tells us that traffic from 173.255.223.149  to 10.1.11.157 was rejected and the same was accepted later.
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_d116818e)
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_7316a13d)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/flow%20log.png?raw=true)
 
 ---
 
@@ -197,7 +195,7 @@ Logs Insights is a CloudWatch feature that analyzes your logs. In Log Insights, 
 What was the query you ran, and what does it do?
 I ran the query to get the details of number of rejected requests  and limited to 20 entries
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_3e1e79a1)
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/7.%20VPC%20Monitoring%20with%20Flowlogs/log%20insights.png?raw=true)
 
 ---
 
