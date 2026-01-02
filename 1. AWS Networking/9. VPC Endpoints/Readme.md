@@ -50,6 +50,9 @@ Overall, the project strengthened my confidence in working with VPCs, endpoints,
 In today's project, I used Amazon VPC to set up VPC Endpoint , Specifically S3 gateway. This provides my VPC with direct access to another AWS service.
 This project took me around 90 minutes including documentation.
 
+### Mission to accomplish:
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/9.%20VPC%20Endpoints/game%20plan.png?raw=true)
+
 ---
 
 
