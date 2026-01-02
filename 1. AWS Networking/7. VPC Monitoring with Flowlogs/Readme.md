@@ -11,12 +11,6 @@
 * TIme: 90 hours
 * Key Concepts: Amazon VPC, Amazon EC2, Amazon CloudWatch
 
-## Project Overview  
-
-* Difficulty: It's getting spicy..
-* TIme: 2 hours
-* Key Concepts: Amazon VPC, Amazon EC2
-
 In this project "VPC Monitoring with Flow Logs", Let’s kick off network monitoring by adding tracking tools to our VPC set up
 Get ready to:
 * Set up two VPCs and test their peering connection.
@@ -50,6 +44,10 @@ In today's project, I used Amazon VPC to
 * Tested VPC peering: By connecting the two VPCs, you validated that traffic could flow between them, revisiting concepts from your earlier peering project.
 * Enabled VPC Flow Logs: Attached flow logs to your VPCs to capture inbound and outbound traffic at the network interface level.
 * Integrated with CloudWatch: Flow logs were sent to a CloudWatch Log Group, where you could analyze traffic patterns, blocked requests, and overall network health.
+
+## Mission to accomplish:
+
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_e7fa8775)
 
 ---
 
