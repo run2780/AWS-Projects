@@ -3,12 +3,52 @@
 
 ---
 
-**Author:** Arun Srinivasan  
-**Email:** run2780@gmail.com
+** Author: Arun Srinivasan | December 2025  
+** Linkedin: www.linkedin.com/in/arun-srinivasan-2a244325
 
+## Project Overview
 
+* Difficulty: Mildly Spicy
+* TIme: 60 min
+* Key Concepts: Amazon VPC, Amazon EC2, Amazon S3
 
-![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-s3_3e1e79a2)
+In this project "Access S3 from a VPC", it's time to go beyond the boundaries of a VPC.
+For example, Amazon S3 is a classic AWS service that doesn't live inside a VPC! S3 is, by default, accessible from the internet, so you can manage its access and security without having to change network settings or internet gateways.
+And S3 is just the beginning. Services like AWS IAM, Amazon Route 53, and even databases like DynamoDB also live outside of your VPC.
+
+#### Get ready to:
+* Set up a VPC with an EC2 instance.
+* Use access keys to give your EC2 instance the power to use your AWS account.
+* Interact with Amazon S3... through your EC2 instance!
+
+### How I used Amazon VPC in this project
+
+How did you use Amazon VPC in today's project?
+In this project, I used Amazon VPC as the foundational network environment that allowed my EC2 instance to securely interact with Amazon S3.
+* Created a custom VPC with a CIDR block (10.0.0.0/16) to host my resources, ensuring isolation from other networks.
+* Configured a public subnet within the VPC so your EC2 instance could have internet access and connect via EC2 Instance Connect.
+* Launched an EC2 instance inside the VPC, inheriting the VPC’s routing and security rules.
+* Attached a security group that was tied to the VPC that allowed inbound SSH traffic, enabling you to connect to the instance.
+* Enabled public IP assignment since EC2 Instance Connect requires a public IP.
+* Provided connectivity to external AWS services: Even though S3 lives outside of VPCs, my EC2 instance inside the VPC was able to reach it over the internet once credentials were configured.
+
+##### One thing I didn't expect in this project was...
+
+What is one thing you didn't expect in this project?
+One thing you probably didn’t expect in this project was how Amazon S3 lives outside of your VPC.
+At first glance, it feels natural to assume that all AWS services would sit inside the VPC you carefully designed. But S3 (along with services like IAM, Route 53, and DynamoDB) is actually a global service accessible over the internet, not bound to your VPC’s private network. That’s why you had to configure access keys and use the AWS CLI from your EC2 instance to reach it.
+
+This project took me 60 minutes including documentation.
+
+## Personal reflection
+Completing this project gave me a deeper appreciation for how AWS services interact across boundaries. At first, I assumed that Amazon S3 would naturally sit inside my VPC, but learning that it exists outside and is accessed globally was an eye‑opening moment. It reminded me that cloud architecture often challenges our assumptions, and understanding these nuances is what separates a beginner from someone building secure, scalable systems.
+
+Working through the steps—creating the VPC, configuring subnets, launching an EC2 instance, and setting up access keys—reinforced the importance of network isolation, security groups, and credential management. I also realized how critical it is to follow best practices, like using IAM roles instead of static access keys, to ensure long‑term security and maintainability.
+
+On a personal level, I felt a sense of accomplishment when my EC2 instance successfully listed and uploaded files to the S3 bucket. That small validation—seeing the test.txt  file appear in my bucket—was a tangible reward for the effort I put into configuring the environment. It boosted my confidence in troubleshooting and reinforced my patience in working through AWS’s layers of configuration.
+
+### Mission to accomplish:
+![Image](https://github.com/run2780/AWS-Projects/blob/main/1.%20AWS%20Networking/8.%20Access%20S3%20from%20a%20VPC/game%20plan.png?raw=true)
 
 ---
 
@@ -18,28 +58,7 @@
 
 A VPC (Virtual Private Cloud) is like your own private space inside AWS. In this space, you can set up and run AWS resources in a network that you control. The main idea is that it’s separate and secure, so your resources don’t mix withothers.
 
-### How I used Amazon VPC in this project
 
-How did you use Amazon VPC in today's project?
-In this project, I used Amazon VPC as the foundational network environment that allowed my EC2 instance to securely interact with Amazon S3.
-Created a custom VPC with a CIDR block (10.0.0.0/16) to host my resources, ensuring isolation from other networks.
-Configured a public subnet within the VPC so your EC2 instance could have internet access and connect via EC2 Instance Connect.
-Launched an EC2 instance inside the VPC, inheriting the VPC’s routing and security rules.
-Attached a security group that was tied to the VPC that allowed inbound SSH traffic, enabling you to connect to the instance.
-Enabled public IP assignment since EC2 Instance Connect requires a public IP.
-Provided connectivity to external AWS services: Even though S3 lives outside of VPCs, my EC2 instance inside the VPC was able to reach it over the internet once credentials were configured.
-
-### One thing I didn't expect in this project was...
-
-What is one thing you didn't expect in this project?
-One thing you probably didn’t expect in this project was how Amazon S3 lives outside of your VPC.
-
-At first glance, it feels natural to assume that all AWS services would sit inside the VPC you carefully designed. But S3 (along with services like IAM, Route 53, and DynamoDB) is actually a global service accessible over the internet, not bound to your VPC’s private network. That’s why you had to configure access keys and use the AWS CLI from your EC2 instance to reach it.
-
-### This project took me...
-
-How much time did this project take you?
-This project took me 60 minutes including documentation.
 
 ---
 
@@ -167,6 +186,9 @@ The third command I ran was 'aws s3 ls' which validated that the test file 'test
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-s3_3e1e79a2)
 
 ---
+![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-s3_3e1e79a2)
 
 ---
+
+
 
