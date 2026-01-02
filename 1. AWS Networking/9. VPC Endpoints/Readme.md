@@ -33,7 +33,7 @@ Get ready to:
 * Use VPC endpoints to directly access your S3 bucket from your VPC.
 * Test your endpoint setup using an S3 security tool called bucket policies!
 
-## personal reflection:
+## Personal reflection:
 Completing this project gave me a deeper appreciation for how AWS networking concepts translate into real-world security practices. At first, I thought connecting an EC2 instance to S3 was straightforward, but I quickly realized that routing traffic through the public internet introduced unnecessary risks. Setting up a VPC endpoint showed me how AWS provides elegant solutions to keep communication private and secure.
 One unexpected moment was when my own access to the S3 bucket was blocked after applying the bucket policy. It was a reminder that security configurations can be powerful but also unforgiving if not carefully planned. This taught me the importance of testing policies step by step and validating access from different perspectives.
 
@@ -47,9 +47,9 @@ Overall, the project strengthened my confidence in working with VPCs, endpoints,
 * Confidence building: gaining trust in my ability to configure endpoints and policies.
 
 ### How I used Amazon VPC in this project
-
 In today's project, I used Amazon VPC to set up VPC Endpoint , Specifically S3 gateway. This provides my VPC with direct access to another AWS service.
 This project took me around 90 minutes including documentation.
+
 ---
 
 
