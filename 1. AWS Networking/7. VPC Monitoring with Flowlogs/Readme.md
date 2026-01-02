@@ -1,11 +1,9 @@
 ---
 # VPC Monitoring with Flow Logs
 
+---
 **Author:** Arun Srinivasan  
 **Email:** run2780@gmail.com
-
----
-
 
 ![Image](http://learn.nextwork.org/courageous_brown_peaceful_mermaid/uploads/aws-networks-monitoring_3e1e79a1)
 
