@@ -54,34 +54,32 @@ In today's project, I used Amazon VPC to
 ## In the first part of my project...
 
 ### Step 1 - Set up VPCs
-
 In this step, I will be creating two VPC from scratch and set up monitoring for them. 
 You can absolutely set up monitoring for architectures with a single VPC, but we're settings up two VPCs today so we can revise some learnings from the VPC peering project too!
 
 ### Step 2 - Launch EC2 instances
-
 In this step, I will be launching an EC2 instance in each VPC, so we can use them to test your VPC peering connection later.
 
 ### Step 3 - Set up Logs
-
 Monitoring VPC traffic?!
 In this step, I will be setting up a way to track all inbound and outbound network traffic.
 Set up a space that stores all of these records.
 
 ### Step 4 - Set IAM permissions for Logs
-
 What are we doing in this step?
 VPC Flow Logs doesn't have the permission to write logs and send them to CloudWatch... yet.
 Let's give Flow Logs the permission to do both, using the power of IAM roles and policies!
 
 ---
 
-## Step 1 - Set up VPCs - Multi-VPC Architecture
-What did you launch in this step? How many subnets did you create?<br>
+### Step 1 - Set up VPCs - Multi-VPC Architecture
+What did you launch in this step?<br>
+How many subnets did you create?<br>
 I started my project by launching two VPCs. We created two public Subnets. i.e, One public subnet in each VPC with no private subnets.
 
-Why are the IPv4 CIDR blocks for VPCs 1 and 2 unique?
+Why are the IPv4 CIDR blocks for VPCs 1 and 2 unique?<br>
 Each VPC must have a unique IPv4 CIDR block so the IP addresses of their resources don't overlap. Having overlapping IP addresses could cause routing conflicts and connectivity issues!
+
 ---
 
 ### Step 2 - Launch EC2 instances
